@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import ProjectGallery from '@/components/ProjectGallery';
 import type { Metadata } from 'next';
 
 import FAQAccordion from '@/components/FAQAccordion';
