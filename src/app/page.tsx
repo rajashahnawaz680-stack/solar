@@ -19,16 +19,10 @@ export const metadata: Metadata = {
 
 export default function Home() {
   const faqs = [
-    { question: "How do I get a solar quotation?", answer: "You can easily request a quotation by filling out our free quote form online, messaging us on WhatsApp, or calling us. Our team will review your requirements and provide a customized proposal." },
-    { question: "Do you provide solar installation in Islamabad?", answer: "Yes, we offer comprehensive solar installation services across Islamabad, subject to service availability and site assessment." },
-    { question: "Do you provide solar installation in Rawalpindi?", answer: "Yes, our installation teams actively serve residential and commercial customers throughout Rawalpindi." },
-    { question: "Can I purchase a solar system on installments?", answer: "Yes, we offer installment plans. Final eligibility, monthly payment schedules, and terms are confirmed during the quotation and approval process." },
-    { question: "Can I pay for the system in cash?", answer: "Absolutely. We offer cash and upfront purchase options for all our solar systems based on your finalized quotation." },
-    { question: "Which solar system size do I need?", answer: "The right system size depends on your monthly electricity consumption, property type, and energy goals. We typically recommend 5kW, 10kW, or 15kW systems based on a detailed assessment of your electricity bill." },
-    { question: "Do I need to provide my electricity bill?", answer: "Providing your recent electricity bill is highly recommended. It allows our team to accurately size the solar system to meet your exact power requirements." },
-    { question: "Do you install residential solar systems?", answer: "Yes, we provide end-to-end solar solutions designed specifically for homes, including on-grid and hybrid systems." },
-    { question: "Do you install commercial solar systems?", answer: "Yes, we serve businesses with commercial-grade solar installations tailored to reduce dependency on grid electricity." },
-    { question: "How does the installation process work?", answer: "The process begins with a site assessment, followed by system planning and quotation. Once the payment terms are finalized, we proceed with equipment selection, professional installation, and final testing before handover." },
+    { question: "How do I know which solar system size I need?", answer: "The right system size depends on your monthly electricity consumption, roof space, and budget. Contact us for a free assessment." },
+    { question: "Can I pay for a solar system in installments?", answer: "Yes, we offer installment options for solar systems. Eligibility and terms are confirmed during the quotation process." },
+    { question: "How can I request a solar quotation?", answer: "You can request a free solar quote by filling out our Quote Form, sending us a message on WhatsApp, or calling us directly." },
+    { question: "What information do you need for a solar quote?", answer: "To provide an accurate quote, we need to know your average monthly electricity bill, property type, and your location." }
   ];
 
   return (
@@ -361,6 +355,12 @@ export default function Home() {
             <h2 className="text-3xl font-bold text-zinc-900 mb-4">Frequently Asked Questions</h2>
           </div>
           <FAQAccordion items={faqs} />
+        </div>
+        <div className="mt-12 text-center">
+          <p className="text-lg text-zinc-600 mb-6">Have another question?</p>
+          <Link href="/contact" className="inline-block bg-zinc-900 text-white font-bold px-8 py-3 rounded-md hover:bg-zinc-800 transition">
+            Ask Your Question
+          </Link>
         </div>
       </section>
 
