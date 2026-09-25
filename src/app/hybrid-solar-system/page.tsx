@@ -1,166 +1,96 @@
-/* eslint-disable @typescript-eslint/no-explicit-any */
-/* eslint-disable react/no-unescaped-entities */
 import Link from 'next/link';
-import type { Metadata } from 'next';
-import QuoteForm from '@/components/QuoteForm';
-import FAQAccordion from '@/components/FAQAccordion';
-import Breadcrumbs from '@/components/Breadcrumbs';
-import SystemComparison from '@/components/SystemComparison';
 
-export const metadata: Metadata = {
-  title: "Hybrid Solar System Islamabad & Rawalpindi | Solar KCKY",
-  description: "Discover hybrid solar systems with battery storage for reliable power in Islamabad and Rawalpindi. Cash and installment options available.",
-  keywords: "hybrid solar system Islamabad, hybrid solar system Rawalpindi",
-  alternates: { canonical: '/hybrid-solar-system' },
-  openGraph: {
-    title: "Hybrid Solar System Islamabad & Rawalpindi | Solar KCKY",
-    description: "Discover hybrid solar systems with battery storage for reliable power in Islamabad and Rawalpindi. Cash and installment options available.",
-    url: '/hybrid-solar-system',
-    siteName: 'Solar KCKY',
-    type: 'website',
-  },
+export const metadata = {
+  title: 'Hybrid Solar | Solar KCKY',
+  description: 'The ultimate combination of solar generation and intelligent battery backup.'
 };
 
-export default function Page() {
-  const faqs = [{"question": "What is a hybrid solar system?", "answer": "A system that uses solar panels, battery storage, and grid connection together for flexible energy management."}, {"question": "Does a hybrid system use batteries?", "answer": "Yes, battery integration is a core component of a hybrid solar system."}, {"question": "Can a hybrid system use grid electricity?", "answer": "Yes, it remains connected to the grid and can draw power when solar and battery reserves are depleted."}, {"question": "How is battery size determined?", "answer": "It is determined by assessing the specific electrical loads you wish to run during an outage and the desired duration."}, {"question": "Can I purchase a hybrid system on installments?", "answer": "Yes, installment plans can be explored during your customized quotation process."}, {"question": "How much does a hybrid solar system cost?", "answer": "Because battery technologies and capacities vary greatly, prices differ. Request a quote for precise costing."}];
-  const internalLinks = [{"label": "On-Grid Systems", "href": "/on-grid-solar-system"}, {"label": "5kW System", "href": "/5kw-solar-system"}, {"label": "10kW System", "href": "/10kw-solar-system"}, {"label": "15kW System", "href": "/15kw-solar-system"}];
-
+export default function SolutionPage() {
   return (
-    <div className="w-full flex flex-col bg-white">
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "What is a hybrid solar system?", "acceptedAnswer": {"@type": "Answer", "text": "A system that uses solar panels, battery storage, and grid connection together for flexible energy management."}}, {"@type": "Question", "name": "Does a hybrid system use batteries?", "acceptedAnswer": {"@type": "Answer", "text": "Yes, battery integration is a core component of a hybrid solar system."}}, {"@type": "Question", "name": "Can a hybrid system use grid electricity?", "acceptedAnswer": {"@type": "Answer", "text": "Yes, it remains connected to the grid and can draw power when solar and battery reserves are depleted."}}, {"@type": "Question", "name": "How is battery size determined?", "acceptedAnswer": {"@type": "Answer", "text": "It is determined by assessing the specific electrical loads you wish to run during an outage and the desired duration."}}, {"@type": "Question", "name": "Can I purchase a hybrid system on installments?", "acceptedAnswer": {"@type": "Answer", "text": "Yes, installment plans can be explored during your customized quotation process."}}, {"@type": "Question", "name": "How much does a hybrid solar system cost?", "acceptedAnswer": {"@type": "Answer", "text": "Because battery technologies and capacities vary greatly, prices differ. Request a quote for precise costing."}}]}) }} />
+    <main className="min-h-screen bg-white pt-20">
       
-      {/* 1. HERO */}
-      <section className="w-full bg-zinc-950 py-24 px-4 sm:px-6 lg:px-8 text-center">
-        <div className="max-w-4xl mx-auto">
-          <Breadcrumbs items={[{ label: 'Hybrid Solar System', href: '/hybrid-solar-system' }]} />
-          <h1 className="text-4xl md:text-5xl font-extrabold text-white mb-6">Hybrid Solar System</h1>
-          <p className="text-lg md:text-xl text-zinc-300 mb-10 leading-relaxed">
-            Hybrid solar systems cleverly combine solar generation with battery storage and grid electricity, providing flexibility and power reliability depending on your selected configuration.
-          </p>
-          <div className="flex flex-col sm:flex-row justify-center gap-4">
-            <Link href="#quote" className="bg-emerald-600 text-white font-bold px-8 py-4 rounded-md hover:bg-emerald-700 transition">
-              Get Your Free Solar Quote
-            </Link>
-            <a href="https://wa.me/03125634911" className="border border-zinc-700 text-white font-bold px-8 py-4 rounded-md hover:bg-zinc-800 transition">
-              Chat on WhatsApp
-            </a>
-          </div>
+      {/* Hero Banner */}
+      <section className="relative w-full h-[60vh] flex items-center justify-center overflow-hidden bg-slate-900">
+        <img src="https://images.unsplash.com/photo-1592833159155-c62df1b65634?auto=format&fit=crop&w=1920&q=80" alt="Hybrid Solar" className="absolute inset-0 w-full h-full object-cover opacity-40 mix-blend-overlay" />
+        <div className="absolute inset-0 bg-gradient-to-t from-slate-900 via-slate-900/60 to-transparent"></div>
+        <div className="relative z-10 text-center max-w-4xl mx-auto px-4">
+           <h1 className="text-5xl md:text-7xl font-extrabold text-white mb-6 tracking-tight drop-shadow-lg">Hybrid Solar</h1>
+           <p className="text-xl md:text-2xl text-slate-300 mb-10 drop-shadow-md">The ultimate combination of solar generation and intelligent battery backup.</p>
+           <Link href="/get-quote" className="inline-block bg-amber-400 text-slate-900 font-bold px-10 py-4 rounded-xl hover:bg-amber-500 transition-colors shadow-xl text-lg">
+             Get Free Solar Quote
+           </Link>
         </div>
       </section>
 
-      {/* 2. MAIN CONTENT */}
-      <section className="w-full py-16 px-4 sm:px-6 lg:px-8 bg-white">
-        <div className="max-w-4xl mx-auto flex flex-col gap-12">
+      <section className="py-24 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-16">
           
-          <div>
-            <h2 className="text-2xl font-bold text-zinc-900 mb-4">What Is a Hybrid Solar System?</h2>
-            <p className="text-zinc-600 mb-4">A hybrid solar system works by generating electricity from solar panels while being connected to both a battery storage system and the local electricity grid. This provides options for power usage when sunlight is unavailable.</p>
-          </div>
-          <div>
-            <h2 className="text-2xl font-bold text-zinc-900 mb-4">How a Hybrid System Works</h2>
-            <ul className="list-disc pl-5 space-y-2 text-zinc-600">
-              <li><strong>Solar Generation:</strong> Panels generate power during the day.</li>
-              <li><strong>Battery Storage:</strong> Excess power can be stored in batteries for later use.</li>
-              <li><strong>Grid Connection:</strong> The system can draw from or send power to the grid, depending on configuration and local regulations.</li>
-            </ul>
-          </div>
-          <div>
-            <h2 className="text-2xl font-bold text-zinc-900 mb-4">Who May Consider Hybrid Solar</h2>
-            <p className="text-zinc-600 mb-4">Customers who experience frequent grid outages or those who wish to maintain critical loads during night-time hours often consider hybrid configurations.</p>
-          </div>
-          <div>
-            <h2 className="text-2xl font-bold text-zinc-900 mb-4">Battery Considerations</h2>
-            <p className="text-zinc-600 mb-4">The backup duration provided by a hybrid system depends entirely on the size, type, and quantity of batteries installed, as well as the load applied during an outage. We assess your critical loads to recommend a suitable battery bank.</p>
-          </div>
-        
-        </div>
-      </section>
+          {/* Main Content */}
+          <div className="lg:col-span-2 space-y-16">
+            <div>
+              <h2 className="text-3xl font-bold text-slate-900 mb-6 border-b border-slate-100 pb-4">Solution Overview</h2>
+              <p className="text-slate-600 text-lg leading-relaxed">
+                Our hybrid solar services are engineered to provide maximum efficiency and reliability for properties in Islamabad and Rawalpindi. We utilize verified, industry-standard equipment to ensure long-term performance and robust energy independence.
+              </p>
+            </div>
 
-      {/* 3. CASH & INSTALLMENTS */}
-      <section className="w-full py-16 px-4 sm:px-6 lg:px-8 bg-zinc-50 border-y border-zinc-100">
-        <div className="max-w-5xl mx-auto text-center mb-10">
-          <h2 className="text-3xl font-bold text-zinc-900 mb-4">Payment Options</h2>
-        </div>
-        <div className="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8">
-          <div className="bg-white p-8 rounded-xl shadow-sm border border-zinc-200">
-            <h3 className="text-2xl font-bold mb-4 text-zinc-900">Cash Purchase</h3>
-            <p className="text-zinc-600 mb-6 leading-relaxed">Customers can request a cash quotation based on the selected configuration. Proceed with an upfront payment according to the confirmed quotation.</p>
-            <Link href="#quote" className="inline-block bg-zinc-900 text-white font-semibold px-6 py-3 rounded-md hover:bg-zinc-800 transition">Get Cash Quote</Link>
-          </div>
-          <div className="bg-emerald-50 p-8 rounded-xl shadow-sm border border-emerald-100">
-            <h3 className="text-2xl font-bold mb-4 text-emerald-900">Installment Option</h3>
-            <p className="text-emerald-800 mb-6 leading-relaxed">Installment availability, eligibility, down payment, schedule, and final terms are confirmed during the quotation process based on available financing arrangements.</p>
-            <Link href="/solar-on-installments" className="inline-block bg-emerald-600 text-white font-semibold px-6 py-3 rounded-md hover:bg-emerald-700 transition">Ask About Installments</Link>
-          </div>
-        </div>
-      </section>
-
-      {/* 4. INSTALLATION PROCESS */}
-      <section className="w-full py-16 px-4 sm:px-6 lg:px-8 bg-white border-b border-zinc-100">
-        <div className="max-w-5xl mx-auto">
-          <h2 className="text-3xl font-bold text-zinc-900 mb-10 text-center">Installation Process</h2>
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
-            {['Requirement Collection', 'Site Assessment', 'System Proposal', 'Payment Selection', 'Installation', 'Testing & Handover'].map((step, i) => (
-              <div key={i} className="text-center p-4 border border-zinc-100 rounded-lg bg-zinc-50">
-                <div className="w-10 h-10 mx-auto bg-emerald-100 text-emerald-700 font-bold rounded-full flex items-center justify-center mb-3">{i + 1}</div>
-                <h4 className="font-semibold text-zinc-800 text-sm">{step}</h4>
+            <div className="bg-slate-50 rounded-3xl p-8 md:p-10 border border-slate-100">
+              <h2 className="text-2xl font-bold text-slate-900 mb-8">Core Benefits & Specifications</h2>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div className="flex items-start"><svg className="w-5 h-5 text-amber-500 mr-3 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7" /></svg><div><h4 className="font-bold text-slate-900 mb-1">Blackout Protection</h4><p className="text-sm text-slate-600">Seamless failover during outages.</p></div></div>
+     <div className="flex items-start"><svg className="w-5 h-5 text-amber-500 mr-3 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7" /></svg><div><h4 className="font-bold text-slate-900 mb-1">Smart Energy Management</h4><p className="text-sm text-slate-600">Prioritize battery or grid usage.</p></div></div>
               </div>
-            ))}
+            </div>
+
+            <div>
+              <h2 className="text-3xl font-bold text-slate-900 mb-6 border-b border-slate-100 pb-4">How It Works</h2>
+              <div className="space-y-6">
+                 <div className="flex">
+                    <div className="flex-shrink-0 w-12 h-12 rounded-full bg-slate-900 text-amber-400 flex items-center justify-center font-bold text-xl mr-6 shadow-md">1</div>
+                    <div>
+                      <h3 className="text-xl font-bold text-slate-900 mb-2">Site Assessment</h3>
+                      <p className="text-slate-600">We analyze your energy consumption and property structure to design the optimal hybrid solar.</p>
+                    </div>
+                 </div>
+                 <div className="flex">
+                    <div className="flex-shrink-0 w-12 h-12 rounded-full bg-slate-900 text-amber-400 flex items-center justify-center font-bold text-xl mr-6 shadow-md">2</div>
+                    <div>
+                      <h3 className="text-xl font-bold text-slate-900 mb-2">Professional Installation</h3>
+                      <p className="text-slate-600">Our certified technicians deploy the system safely, ensuring full structural integrity and optimal alignment.</p>
+                    </div>
+                 </div>
+                 <div className="flex">
+                    <div className="flex-shrink-0 w-12 h-12 rounded-full bg-slate-900 text-amber-400 flex items-center justify-center font-bold text-xl mr-6 shadow-md">3</div>
+                    <div>
+                      <h3 className="text-xl font-bold text-slate-900 mb-2">Commissioning & Support</h3>
+                      <p className="text-slate-600">The system is activated, tested, and handed over with complete operational guidance and support.</p>
+                    </div>
+                 </div>
+              </div>
+            </div>
+            
+            
+          </div>
+
+          {/* Sidebar CTA */}
+          <div className="lg:col-span-1">
+             <div className="bg-slate-900 rounded-3xl p-8 sticky top-32 shadow-2xl border border-slate-800 text-center">
+                <div className="w-16 h-16 bg-amber-400 rounded-2xl flex items-center justify-center mx-auto mb-6 transform rotate-3 shadow-lg">
+                   <svg className="w-8 h-8 text-slate-900" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M13 10V3L4 14h7v7l9-11h-7z" /></svg>
+                </div>
+                <h3 className="text-2xl font-bold text-white mb-4">Ready to Switch?</h3>
+                <p className="text-slate-300 mb-8">Get a customized quotation for your hybrid solar today.</p>
+                <Link href="/get-quote" className="block w-full bg-amber-400 text-slate-900 font-bold py-4 rounded-xl hover:bg-amber-500 transition-colors mb-4 shadow-lg">
+                  Request Custom Quote
+                </Link>
+                <a href="https://wa.me/923125634911" target="_blank" rel="noopener noreferrer" className="block w-full bg-[#25D366] text-white font-bold py-4 rounded-xl hover:bg-[#20b858] transition-colors shadow-lg flex justify-center items-center">
+                  <svg className="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
+                  WhatsApp Us
+                </a>
+             </div>
           </div>
         </div>
       </section>
-
-      {/* 5. SYSTEM COMPARISON */}
-      <section className="w-full py-16 px-4 sm:px-6 lg:px-8 bg-zinc-50">
-        <div className="max-w-6xl mx-auto">
-          <h2 className="text-3xl font-bold text-zinc-900 mb-8 text-center">System Comparison</h2>
-          <SystemComparison />
-        </div>
-      </section>
-
-      {/* 6. QUOTE FORM */}
-      <section id="quote" className="w-full py-20 px-4 sm:px-6 lg:px-8 bg-zinc-900 text-white">
-        <div className="max-w-5xl mx-auto">
-          <div className="text-center mb-10">
-            <h2 className="text-3xl font-bold mb-4">Request a Quotation</h2>
-            <p className="text-zinc-400">Fill out the form below to receive a personalized system proposal for your property.</p>
-          </div>
-          <div className="text-zinc-900">
-            <QuoteForm />
-          </div>
-        </div>
-      </section>
-
-      {/* 7. FAQ */}
-      <section className="w-full py-20 px-4 sm:px-6 lg:px-8 bg-white">
-        <div className="max-w-5xl mx-auto">
-          <h2 className="text-3xl font-bold text-zinc-900 mb-10 text-center">Frequently Asked Questions</h2>
-          <FAQAccordion items={faqs} />
-        </div>
-      </section>
-
-      {/* 8. FINAL CTA */}
-      <section className="w-full py-20 px-4 sm:px-6 lg:px-8 bg-emerald-700 text-center text-white">
-        <h2 className="text-3xl font-bold mb-6">Get Your Quote Today</h2>
-        <div className="flex flex-col sm:flex-row justify-center gap-4">
-          <Link href="#quote" className="bg-white text-emerald-800 font-bold px-8 py-4 rounded-md hover:bg-zinc-100 transition">
-            Get Your Free Solar Quote
-          </Link>
-          <a href="tel:03125634911" className="border-2 border-emerald-400 text-white font-bold px-8 py-4 rounded-md hover:bg-emerald-600 transition">
-            Call Now: 03125634911
-          </a>
-        </div>
-      </section>
-
-      {/* 9. INTERNAL LINKS */}
-      <section className="w-full py-8 px-4 sm:px-6 lg:px-8 bg-zinc-950 border-t border-zinc-900">
-        <div className="max-w-6xl mx-auto flex flex-wrap justify-center gap-4 text-sm">
-          {internalLinks.map((lnk: any, i: number) => (
-             <Link key={i} href={lnk.href} className="text-zinc-400 hover:text-white transition px-2">{lnk.label}</Link>
-          ))}
-        </div>
-      </section>
-
-    </div>
+    </main>
   );
 }

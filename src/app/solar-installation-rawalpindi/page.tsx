@@ -1,173 +1,96 @@
-/* eslint-disable @typescript-eslint/no-explicit-any */
-/* eslint-disable react/no-unescaped-entities */
 import Link from 'next/link';
-import type { Metadata } from 'next';
-import QuoteForm from '@/components/QuoteForm';
-import FAQAccordion from '@/components/FAQAccordion';
 
-export const metadata: Metadata = {
-  title: "Solar Installation in Rawalpindi | Solar Company Rawalpindi",
-  description: "Reliable solar installation services in Rawalpindi. Get custom quotations for residential and commercial solar systems with flexible payment options.",
-  keywords: "solar installation Rawalpindi, solar company Rawalpindi, solar panels Rawalpindi, solar system Rawalpindi, solar system price Rawalpindi, solar on installments Rawalpindi",
-  alternates: { canonical: '/solar-installation-rawalpindi' },
-  openGraph: {
-    title: "Solar Installation in Rawalpindi",
-    description: "Reliable solar installation for homes and businesses in Rawalpindi. Flexible payment options available.",
-    url: '/solar-installation-rawalpindi',
-    siteName: 'Solar KCKY',
-    type: 'website',
-  },
+export const metadata = {
+  title: 'Commercial Solar | Solar KCKY',
+  description: 'Heavy-duty solar architectures for businesses, offices, and commercial sites.'
 };
 
-export default function RawalpindiPage() {
-  const faqs = [
-    { question: "Do you offer solar installation services throughout Rawalpindi?", answer: "Yes, our installation services are available across Rawalpindi, depending on site viability and scheduling." },
-    { question: "How can I check the solar system price in Rawalpindi?", answer: "Since prices vary based on your load requirements and chosen system (e.g., Hybrid vs On-Grid), please fill out our quote form for a customized price estimate." },
-    { question: "Are solar installment plans available for Rawalpindi residents?", answer: "Yes, we provide installment purchasing options. Our team will share the eligibility criteria and terms once you request a quotation." },
-    { question: "How long does the installation take?", answer: "Once the system is planned and payment terms are confirmed, the physical installation is typically completed within a few days." }
-  ];
-
+export default function SolutionPage() {
   return (
-    <div className="w-full flex flex-col bg-white">
+    <main className="min-h-screen bg-white pt-20">
       
-      {/* 1. HERO */}
-      <section className="w-full bg-zinc-900 py-24 md:py-32 px-4 sm:px-6 lg:px-8 text-center border-b-[8px] border-emerald-600">
-        <div className="max-w-4xl mx-auto">
-          <h1 className="text-4xl md:text-6xl font-extrabold text-white mb-6">
-            Solar Installation in <span className="text-emerald-400">Rawalpindi</span>
-          </h1>
-          <p className="text-lg md:text-xl text-zinc-300 mb-10 leading-relaxed">
-            Empowering Rawalpindi residents and businesses with reliable solar systems. Enjoy professional service with straightforward cash and installment options.
-          </p>
-          <div className="flex flex-col sm:flex-row justify-center gap-4">
-            <Link href="#quote-rwp" className="bg-emerald-600 text-white font-bold px-8 py-4 rounded-md hover:bg-emerald-700 transition shadow-lg shadow-emerald-900/30">
-              Get Your Free Solar Quote
-            </Link>
-            <a href="https://wa.me/03125634911" className="bg-zinc-800 text-white font-bold px-8 py-4 rounded-md hover:bg-zinc-700 transition flex items-center justify-center gap-2">
-              <svg className="w-5 h-5 text-emerald-400" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
-              Chat on WhatsApp
-            </a>
-          </div>
+      {/* Hero Banner */}
+      <section className="relative w-full h-[60vh] flex items-center justify-center overflow-hidden bg-slate-900">
+        <img src="https://images.unsplash.com/photo-1508514177221-188b1c77eca2?auto=format&fit=crop&w=1920&q=80" alt="Commercial Solar" className="absolute inset-0 w-full h-full object-cover opacity-40 mix-blend-overlay" />
+        <div className="absolute inset-0 bg-gradient-to-t from-slate-900 via-slate-900/60 to-transparent"></div>
+        <div className="relative z-10 text-center max-w-4xl mx-auto px-4">
+           <h1 className="text-5xl md:text-7xl font-extrabold text-white mb-6 tracking-tight drop-shadow-lg">Commercial Solar</h1>
+           <p className="text-xl md:text-2xl text-slate-300 mb-10 drop-shadow-md">Heavy-duty solar architectures for businesses, offices, and commercial sites.</p>
+           <Link href="/get-quote" className="inline-block bg-amber-400 text-slate-900 font-bold px-10 py-4 rounded-xl hover:bg-amber-500 transition-colors shadow-xl text-lg">
+             Get Free Solar Quote
+           </Link>
         </div>
       </section>
 
-      {/* 2. INTRODUCTION */}
-      <section className="w-full py-16 px-4 sm:px-6 lg:px-8 bg-zinc-50">
-        <div className="max-w-5xl mx-auto flex flex-col md:flex-row items-center gap-10">
-          <div className="flex-1">
-            <h2 className="text-3xl font-bold text-zinc-900 mb-6">Expert Solar Services for Rawalpindi</h2>
-            <p className="text-lg text-zinc-600 leading-relaxed mb-4">
-              Transitioning to solar power in Rawalpindi requires a well-planned approach. Our dedicated team carefully reviews your property's electrical load and space to design a system that works optimally.
-            </p>
-            <p className="text-lg text-zinc-600 leading-relaxed">
-              We focus on providing transparent quotes, clear timelines, and professional installation standards without the guesswork.
-            </p>
-          </div>
-          <div className="flex-1 bg-white p-8 rounded-xl border border-zinc-200 shadow-sm">
-            <h3 className="text-xl font-bold text-zinc-900 mb-4">Service Availability</h3>
-            <p className="text-zinc-600">We serve major residential and commercial sectors across Rawalpindi, subject to preliminary assessment and scheduling.</p>
-          </div>
-        </div>
-      </section>
+      <section className="py-24 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-16">
+          
+          {/* Main Content */}
+          <div className="lg:col-span-2 space-y-16">
+            <div>
+              <h2 className="text-3xl font-bold text-slate-900 mb-6 border-b border-slate-100 pb-4">Solution Overview</h2>
+              <p className="text-slate-600 text-lg leading-relaxed">
+                Our commercial solar services are engineered to provide maximum efficiency and reliability for properties in Islamabad and Rawalpindi. We utilize verified, industry-standard equipment to ensure long-term performance and robust energy independence.
+              </p>
+            </div>
 
-      {/* 3 & 4. SERVICES & SYSTEM OPTIONS */}
-      <section className="w-full py-20 px-4 sm:px-6 lg:px-8 bg-white border-y border-zinc-100">
-        <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-16">
-          <div>
-            <h2 className="text-2xl font-bold text-zinc-900 mb-8">What We Offer</h2>
-            <ul className="space-y-4">
-              {['Residential Solar Installation', 'Commercial Solar Installation', 'Solar Panel Installation', 'Solar Consultation', 'Cash Purchase', 'Installment Options'].map((srv, i) => (
-                <li key={i} className="flex items-center gap-3 text-zinc-700">
-                  <div className="w-2 h-2 bg-emerald-500 rounded-full"></div> {srv}
-                </li>
-              ))}
-            </ul>
-          </div>
-          <div>
-            <h2 className="text-2xl font-bold text-zinc-900 mb-8">System Sizes & Topologies</h2>
-            <div className="flex flex-col gap-4">
-              <Link href="/5kw-solar-system" className="p-4 bg-zinc-50 border border-zinc-200 rounded-lg font-medium text-zinc-800 hover:border-emerald-500 transition">5kW Solar System</Link>
-              <Link href="/10kw-solar-system" className="p-4 bg-zinc-50 border border-zinc-200 rounded-lg font-medium text-zinc-800 hover:border-emerald-500 transition">10kW Solar System</Link>
-              <Link href="/15kw-solar-system" className="p-4 bg-zinc-50 border border-zinc-200 rounded-lg font-medium text-zinc-800 hover:border-emerald-500 transition">15kW Solar System</Link>
-              <div className="grid grid-cols-2 gap-4 mt-2">
-                <Link href="/hybrid-solar-system" className="p-3 bg-zinc-900 text-white text-center rounded-lg font-medium hover:bg-zinc-800 transition">Hybrid Solar</Link>
-                <Link href="/on-grid-solar-system" className="p-3 bg-zinc-900 text-white text-center rounded-lg font-medium hover:bg-zinc-800 transition">On-Grid Solar</Link>
+            <div className="bg-slate-50 rounded-3xl p-8 md:p-10 border border-slate-100">
+              <h2 className="text-2xl font-bold text-slate-900 mb-8">Core Benefits & Specifications</h2>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div className="flex items-start"><svg className="w-5 h-5 text-amber-500 mr-3 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7" /></svg><div><h4 className="font-bold text-slate-900 mb-1">Operational Cost Reduction</h4><p className="text-sm text-slate-600">Lock in energy rates for decades.</p></div></div>
+     <div className="flex items-start"><svg className="w-5 h-5 text-amber-500 mr-3 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7" /></svg><div><h4 className="font-bold text-slate-900 mb-1">Scalable Architecture</h4><p className="text-sm text-slate-600">Systems designed for growth.</p></div></div>
               </div>
             </div>
-          </div>
-        </div>
-      </section>
 
-      {/* 5. CASH & INSTALLMENTS */}
-      <section className="w-full py-20 px-4 sm:px-6 lg:px-8 bg-zinc-50">
-        <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-3xl font-bold text-zinc-900 mb-10">Payment Options</h2>
-          <div className="bg-white rounded-xl shadow-sm border border-zinc-200 overflow-hidden flex flex-col md:flex-row text-left">
-            <div className="flex-1 p-8 border-b md:border-b-0 md:border-r border-zinc-200">
-              <h3 className="text-xl font-bold text-zinc-900 mb-2">Buy in Cash</h3>
-              <p className="text-zinc-600 text-sm leading-relaxed">Proceed with an upfront payment based on the final accepted quotation for your Rawalpindi property.</p>
-            </div>
-            <div className="flex-1 p-8">
-              <h3 className="text-xl font-bold text-zinc-900 mb-2">Pay in Installments</h3>
-              <p className="text-zinc-600 text-sm leading-relaxed">Request details on our <Link href="/solar-on-installments" className="text-emerald-600 underline">installment plans</Link>. Specific payment terms are clarified during the quoting process.</p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* 6. INSTALLATION PROCESS */}
-      <section className="w-full py-20 px-4 sm:px-6 lg:px-8 bg-white border-y border-zinc-100">
-        <div className="max-w-7xl mx-auto">
-          <h2 className="text-3xl font-bold text-zinc-900 mb-12 text-center">How We Work</h2>
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
-            {['Requirement', 'Assessment', 'System Proposal', 'Payment Selection', 'Installation', 'Testing/Handover'].map((step, i) => (
-              <div key={i} className="text-center p-4">
-                <div className="w-12 h-12 mx-auto bg-emerald-100 text-emerald-700 font-bold rounded-full flex items-center justify-center mb-4">{i + 1}</div>
-                <h4 className="font-semibold text-zinc-800">{step}</h4>
+            <div>
+              <h2 className="text-3xl font-bold text-slate-900 mb-6 border-b border-slate-100 pb-4">How It Works</h2>
+              <div className="space-y-6">
+                 <div className="flex">
+                    <div className="flex-shrink-0 w-12 h-12 rounded-full bg-slate-900 text-amber-400 flex items-center justify-center font-bold text-xl mr-6 shadow-md">1</div>
+                    <div>
+                      <h3 className="text-xl font-bold text-slate-900 mb-2">Site Assessment</h3>
+                      <p className="text-slate-600">We analyze your energy consumption and property structure to design the optimal commercial solar.</p>
+                    </div>
+                 </div>
+                 <div className="flex">
+                    <div className="flex-shrink-0 w-12 h-12 rounded-full bg-slate-900 text-amber-400 flex items-center justify-center font-bold text-xl mr-6 shadow-md">2</div>
+                    <div>
+                      <h3 className="text-xl font-bold text-slate-900 mb-2">Professional Installation</h3>
+                      <p className="text-slate-600">Our certified technicians deploy the system safely, ensuring full structural integrity and optimal alignment.</p>
+                    </div>
+                 </div>
+                 <div className="flex">
+                    <div className="flex-shrink-0 w-12 h-12 rounded-full bg-slate-900 text-amber-400 flex items-center justify-center font-bold text-xl mr-6 shadow-md">3</div>
+                    <div>
+                      <h3 className="text-xl font-bold text-slate-900 mb-2">Commissioning & Support</h3>
+                      <p className="text-slate-600">The system is activated, tested, and handed over with complete operational guidance and support.</p>
+                    </div>
+                 </div>
               </div>
-            ))}
+            </div>
+            
+            
+          </div>
+
+          {/* Sidebar CTA */}
+          <div className="lg:col-span-1">
+             <div className="bg-slate-900 rounded-3xl p-8 sticky top-32 shadow-2xl border border-slate-800 text-center">
+                <div className="w-16 h-16 bg-amber-400 rounded-2xl flex items-center justify-center mx-auto mb-6 transform rotate-3 shadow-lg">
+                   <svg className="w-8 h-8 text-slate-900" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M13 10V3L4 14h7v7l9-11h-7z" /></svg>
+                </div>
+                <h3 className="text-2xl font-bold text-white mb-4">Ready to Switch?</h3>
+                <p className="text-slate-300 mb-8">Get a customized quotation for your commercial solar today.</p>
+                <Link href="/get-quote" className="block w-full bg-amber-400 text-slate-900 font-bold py-4 rounded-xl hover:bg-amber-500 transition-colors mb-4 shadow-lg">
+                  Request Custom Quote
+                </Link>
+                <a href="https://wa.me/923125634911" target="_blank" rel="noopener noreferrer" className="block w-full bg-[#25D366] text-white font-bold py-4 rounded-xl hover:bg-[#20b858] transition-colors shadow-lg flex justify-center items-center">
+                  <svg className="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
+                  WhatsApp Us
+                </a>
+             </div>
           </div>
         </div>
       </section>
-
-      {/* 8. QUOTE FORM (RAWALPINDI) */}
-      <section id="quote-rwp" className="w-full py-20 px-4 sm:px-6 lg:px-8 bg-zinc-900 text-white">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-10">
-            <h2 className="text-3xl font-bold mb-4">Request a Quote in Rawalpindi</h2>
-            <p className="text-zinc-400">Fill out the form below to receive a personalized system proposal.</p>
-          </div>
-          <div className="text-zinc-900">
-            <QuoteForm />
-          </div>
-        </div>
-      </section>
-
-      {/* 9. FAQ */}
-      <section className="w-full py-20 px-4 sm:px-6 lg:px-8 bg-zinc-50">
-        <div className="max-w-7xl mx-auto">
-          <h2 className="text-3xl font-bold text-zinc-900 mb-10 text-center">Rawalpindi FAQs</h2>
-          <FAQAccordion items={faqs} />
-        </div>
-      </section>
-
-      {/* 10. FINAL CTA */}
-      <section className="w-full py-20 px-4 sm:px-6 lg:px-8 bg-emerald-600 text-center text-white">
-        <h2 className="text-3xl font-bold mb-6">Get Your Free Solar Quote in Rawalpindi</h2>
-        <Link href="#quote-rwp" className="inline-block bg-white text-emerald-700 font-bold px-10 py-4 rounded-md hover:bg-zinc-100 transition shadow-md">
-          Start Your Quotation Process
-        </Link>
-      </section>
-      
-      {/* 11. INTERNAL LINKS */}
-      <section className="w-full py-8 px-4 sm:px-6 lg:px-8 bg-zinc-950 border-t border-zinc-900">
-        <div className="max-w-7xl mx-auto flex flex-wrap justify-center gap-6 text-sm">
-          <Link href="/solar-installation-islamabad" className="text-zinc-400 hover:text-white transition">Islamabad Installation</Link>
-          <Link href="/solar-system-price-rawalpindi" className="text-zinc-400 hover:text-white transition">Rawalpindi Prices</Link>
-          <Link href="/get-quote" className="text-zinc-400 hover:text-white transition">Get Quote</Link>
-          <Link href="/solar-on-installments" className="text-zinc-400 hover:text-white transition">Installments</Link>
-        </div>
-      </section>
-    </div>
+    </main>
   );
 }

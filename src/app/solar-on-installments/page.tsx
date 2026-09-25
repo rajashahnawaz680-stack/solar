@@ -1,277 +1,96 @@
 import Link from 'next/link';
-import type { Metadata } from 'next';
 
-import FAQAccordion from '@/components/FAQAccordion';
-import Breadcrumbs from '@/components/Breadcrumbs';
-
-export const metadata: Metadata = {
-  title: "Solar on Installments in Islamabad & Rawalpindi | Solar KCKY",
-  description: "Explore solar installation options with cash or installment payment arrangements in Islamabad and Rawalpindi. Request a free quote today.",
-  keywords: "Solar on installments Islamabad, Solar on installments Rawalpindi, Solar system installments Islamabad, Solar panels on installments Islamabad",
-  alternates: { canonical: '/solar-on-installments' },
-  openGraph: {
-    title: "Solar on Installments in Islamabad & Rawalpindi",
-    description: "Explore solar installation options with cash or installment payment arrangements.",
-    url: '/solar-on-installments',
-    siteName: 'Solar KCKY',
-    type: 'website',
-  },
+export const metadata = {
+  title: 'Battery Storage | Solar KCKY',
+  description: 'Advanced energy storage solutions for round-the-clock power availability.'
 };
 
-export default function InstallmentsPage() {
-  const faqs = [
-    { question: "Can I get a solar system on installments?", answer: "Yes, you can ask about available installment plans during the quotation process. Final terms depend on the applicable payment/financing arrangement." },
-    { question: "Are installment options available in Islamabad?", answer: "Yes, we offer installment options for eligible customers in Islamabad." },
-    { question: "Are installment options available in Rawalpindi?", answer: "Yes, our installment options are also available for eligible properties in Rawalpindi." },
-    { question: "Can I also pay in cash?", answer: "Absolutely. We provide quotations for both upfront cash purchases and installment plans." },
-    { question: "How is the monthly payment determined?", answer: "Final terms depend on the applicable payment/financing arrangement, system size, and down payment, and are confirmed during the quotation process." },
-    { question: "Is a down payment required?", answer: "Generally, yes. The down payment amount and schedule are verified during the quotation process." },
-    { question: "What information is required for an installment quotation?", answer: "We require your property details, location, and recent electricity bills to size the system and discuss installment availability." },
-    { question: "Which solar system sizes can be considered for installments?", answer: "Installment options can be considered for various sizes, including 5kW, 10kW, 15kW, and Hybrid systems." },
-    { question: "How long does the quotation process take?", answer: "After you submit your requirements, our team will review your usage and respond promptly to discuss options." },
-    { question: "Is installment approval guaranteed?", answer: "No. Installment availability and eligibility are subject to the applicable payment/financing arrangement and review process." },
-  ];
-
+export default function SolutionPage() {
   return (
-    <div className="w-full flex flex-col bg-white">
+    <main className="min-h-screen bg-white pt-20">
       
-      {/* 1. HERO */}
-      <section className="w-full bg-zinc-950 py-24 px-4 sm:px-6 lg:px-8 text-center border-b-8 border-emerald-600">
-        <div className="max-w-4xl mx-auto">
-          <Breadcrumbs items={[{ label: 'Solar on Installments', href: '/solar-on-installments' }]} />
-          <h1 className="text-4xl md:text-6xl font-extrabold text-white mb-6 leading-tight">
-            Solar on Installments in <span className="text-emerald-500">Islamabad & Rawalpindi</span>
-          </h1>
-          <p className="text-lg md:text-xl text-zinc-300 mb-10 leading-relaxed max-w-3xl mx-auto">
-            Explore solar installation options with cash or installment payment arrangements. Submit your requirements and receive a quotation based on your property, electricity usage, system requirements, and available payment terms.
-          </p>
-          <div className="flex flex-col sm:flex-row justify-center gap-4">
-            <Link href="/get-quote" className="bg-emerald-600 text-white font-bold px-8 py-4 rounded-md hover:bg-emerald-700 transition">
-              Get Your Free Solar Quote
-            </Link>
-            <a href="https://wa.me/03125634911" className="border border-zinc-600 bg-zinc-800 text-white font-bold px-8 py-4 rounded-md hover:bg-zinc-700 transition flex items-center justify-center gap-2">
-              Chat on WhatsApp
-            </a>
-          </div>
+      {/* Hero Banner */}
+      <section className="relative w-full h-[60vh] flex items-center justify-center overflow-hidden bg-slate-900">
+        <img src="https://images.unsplash.com/photo-1509391366360-51590d6350f5?auto=format&fit=crop&w=1920&q=80" alt="Battery Storage" className="absolute inset-0 w-full h-full object-cover opacity-40 mix-blend-overlay" />
+        <div className="absolute inset-0 bg-gradient-to-t from-slate-900 via-slate-900/60 to-transparent"></div>
+        <div className="relative z-10 text-center max-w-4xl mx-auto px-4">
+           <h1 className="text-5xl md:text-7xl font-extrabold text-white mb-6 tracking-tight drop-shadow-lg">Battery Storage</h1>
+           <p className="text-xl md:text-2xl text-slate-300 mb-10 drop-shadow-md">Advanced energy storage solutions for round-the-clock power availability.</p>
+           <Link href="/get-quote" className="inline-block bg-amber-400 text-slate-900 font-bold px-10 py-4 rounded-xl hover:bg-amber-500 transition-colors shadow-xl text-lg">
+             Get Free Solar Quote
+           </Link>
         </div>
       </section>
 
-      {/* 2. PAYMENT OPTIONS */}
-      <section className="w-full py-20 px-4 sm:px-6 lg:px-8 bg-zinc-50 border-b border-zinc-200">
-        <div className="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8">
-          <div className="bg-white p-10 rounded-2xl shadow-sm border border-zinc-200 flex flex-col h-full hover:shadow-md transition">
-            <h3 className="text-3xl font-bold text-zinc-900 mb-4">Pay in Cash</h3>
-            <p className="text-zinc-600 mb-8 flex-grow leading-relaxed text-lg">
-              Customers can request a quotation for an upfront solar system purchase. Final pricing depends on the selected system, equipment, installation requirements, and confirmed quotation.
-            </p>
-            <Link href="/get-quote" className="inline-flex justify-center bg-zinc-900 text-white font-bold px-8 py-4 rounded-md hover:bg-zinc-800 transition">
-              Get Cash Quote
-            </Link>
-          </div>
-          <div className="bg-emerald-50 p-10 rounded-2xl shadow-sm border border-emerald-100 flex flex-col h-full hover:shadow-md transition">
-            <h3 className="text-3xl font-bold text-emerald-950 mb-4">Pay in Installments</h3>
-            <p className="text-emerald-900 mb-8 flex-grow leading-relaxed text-lg">
-              Customers can ask about available installment arrangements. Eligibility, down payment, payment schedule, duration, and final terms are confirmed during the quotation process.
-            </p>
-            <Link href="/get-quote" className="inline-flex justify-center bg-emerald-600 text-white font-bold px-8 py-4 rounded-md hover:bg-emerald-700 transition">
-              Request Installment Quote
-            </Link>
-          </div>
-        </div>
-      </section>
+      <section className="py-24 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-16">
+          
+          {/* Main Content */}
+          <div className="lg:col-span-2 space-y-16">
+            <div>
+              <h2 className="text-3xl font-bold text-slate-900 mb-6 border-b border-slate-100 pb-4">Solution Overview</h2>
+              <p className="text-slate-600 text-lg leading-relaxed">
+                Our battery storage services are engineered to provide maximum efficiency and reliability for properties in Islamabad and Rawalpindi. We utilize verified, industry-standard equipment to ensure long-term performance and robust energy independence.
+              </p>
+            </div>
 
-      {/* 3. HOW IT WORKS */}
-      <section className="w-full py-20 px-4 sm:px-6 lg:px-8 bg-white border-b border-zinc-100">
-        <div className="max-w-7xl mx-auto">
-          <h2 className="text-3xl md:text-4xl font-bold text-zinc-900 mb-16 text-center">How Solar Installments Work</h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {[
-              { step: "1", title: "Submit Your Requirements", desc: "Customer provides Name, Phone, City, Area, Electricity bill, Property type, Preferred system size, and Payment preference." },
-              { step: "2", title: "Requirements Review", desc: "The team reviews the customer's electricity usage and solar requirements." },
-              { step: "3", title: "System Assessment", desc: "The appropriate system configuration is discussed based on the customer's requirements and site conditions." },
-              { step: "4", title: "Quotation & Payment Options", desc: "Customer receives the applicable quotation and available cash/installment terms." },
-              { step: "5", title: "Confirmation", desc: "Customer confirms the selected option after reviewing the applicable terms." },
-              { step: "6", title: "Installation", desc: "Installation is scheduled according to the confirmed agreement." }
-            ].map((item, i) => (
-              <div key={i} className="bg-zinc-50 p-8 rounded-xl border border-zinc-200 relative pt-12">
-                <div className="absolute top-0 left-8 -translate-y-1/2 w-14 h-14 bg-emerald-600 text-white font-bold text-2xl rounded-full flex items-center justify-center border-4 border-white shadow-sm">
-                  {item.step}
-                </div>
-                <h3 className="text-xl font-bold text-zinc-900 mb-3">{item.title}</h3>
-                <p className="text-zinc-600 leading-relaxed">{item.desc}</p>
+            <div className="bg-slate-50 rounded-3xl p-8 md:p-10 border border-slate-100">
+              <h2 className="text-2xl font-bold text-slate-900 mb-8">Core Benefits & Specifications</h2>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div className="flex items-start"><svg className="w-5 h-5 text-amber-500 mr-3 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7" /></svg><div><h4 className="font-bold text-slate-900 mb-1">Nighttime Power</h4><p className="text-sm text-slate-600">Use stored sun energy at night.</p></div></div>
+     <div className="flex items-start"><svg className="w-5 h-5 text-amber-500 mr-3 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7" /></svg><div><h4 className="font-bold text-slate-900 mb-1">Load Shifting</h4><p className="text-sm text-slate-600">Avoid peak grid tariffs.</p></div></div>
               </div>
-            ))}
-          </div>
-        </div>
-      </section>
+            </div>
 
-      {/* 4. WHO CAN REQUEST */}
-      <section className="w-full py-20 px-4 sm:px-6 lg:px-8 bg-zinc-900 text-white">
-        <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-3xl md:text-4xl font-bold mb-8">Who Can Request Installment Information?</h2>
-          <div className="flex flex-wrap justify-center gap-4 mb-10">
-            {['Homeowners', 'Residential Customers', 'Commercial Property Owners', 'Businesses', 'Customers considering different system sizes'].map((item, i) => (
-              <span key={i} className="bg-zinc-800 border border-zinc-700 px-6 py-3 rounded-full text-zinc-300 font-medium">
-                {item}
-              </span>
-            ))}
-          </div>
-          <div className="bg-zinc-800/50 p-6 rounded-lg border border-zinc-700 max-w-2xl mx-auto">
-            <p className="text-zinc-300 font-medium flex items-center justify-center gap-3">
-              <svg className="w-6 h-6 text-emerald-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
-              Installment availability and eligibility are subject to the applicable payment/financing arrangement.
-            </p>
-          </div>
-        </div>
-      </section>
-
-      {/* 5. AVAILABLE SYSTEM TYPES */}
-      <section className="w-full py-20 px-4 sm:px-6 lg:px-8 bg-white border-b border-zinc-100">
-        <div className="max-w-7xl mx-auto">
-          <h2 className="text-3xl md:text-4xl font-bold text-zinc-900 mb-12 text-center">Available System Types</h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {[
-              { title: "5kW Solar System", desc: "For moderate usage.", link: "/5kw-solar-system" },
-              { title: "10kW Solar System", desc: "For higher residential usage.", link: "/10kw-solar-system" },
-              { title: "15kW Solar System", desc: "For large homes & commercial.", link: "/15kw-solar-system" },
-              { title: "Hybrid Solar System", desc: "Includes battery storage.", link: "/hybrid-solar-system" },
-              { title: "On-Grid Solar System", desc: "Grid-connected systems.", link: "/on-grid-solar-system" }
-            ].map((sys, i) => (
-              <div key={i} className="p-8 border border-zinc-200 rounded-xl bg-zinc-50 hover:shadow-md transition flex flex-col">
-                <h3 className="text-2xl font-bold text-zinc-900 mb-2">{sys.title}</h3>
-                <p className="text-zinc-600 mb-6 flex-grow">{sys.desc}</p>
-                <div className="flex gap-3">
-                  <Link href={sys.link} className="flex-1 text-center bg-white border border-zinc-300 text-zinc-700 font-semibold py-3 rounded-md hover:bg-zinc-100 transition">
-                    View Details
-                  </Link>
-                  <Link href="/get-quote" className="flex-1 text-center bg-emerald-600 text-white font-semibold py-3 rounded-md hover:bg-emerald-700 transition">
-                    Get Quote
-                  </Link>
-                </div>
+            <div>
+              <h2 className="text-3xl font-bold text-slate-900 mb-6 border-b border-slate-100 pb-4">How It Works</h2>
+              <div className="space-y-6">
+                 <div className="flex">
+                    <div className="flex-shrink-0 w-12 h-12 rounded-full bg-slate-900 text-amber-400 flex items-center justify-center font-bold text-xl mr-6 shadow-md">1</div>
+                    <div>
+                      <h3 className="text-xl font-bold text-slate-900 mb-2">Site Assessment</h3>
+                      <p className="text-slate-600">We analyze your energy consumption and property structure to design the optimal battery storage.</p>
+                    </div>
+                 </div>
+                 <div className="flex">
+                    <div className="flex-shrink-0 w-12 h-12 rounded-full bg-slate-900 text-amber-400 flex items-center justify-center font-bold text-xl mr-6 shadow-md">2</div>
+                    <div>
+                      <h3 className="text-xl font-bold text-slate-900 mb-2">Professional Installation</h3>
+                      <p className="text-slate-600">Our certified technicians deploy the system safely, ensuring full structural integrity and optimal alignment.</p>
+                    </div>
+                 </div>
+                 <div className="flex">
+                    <div className="flex-shrink-0 w-12 h-12 rounded-full bg-slate-900 text-amber-400 flex items-center justify-center font-bold text-xl mr-6 shadow-md">3</div>
+                    <div>
+                      <h3 className="text-xl font-bold text-slate-900 mb-2">Commissioning & Support</h3>
+                      <p className="text-slate-600">The system is activated, tested, and handed over with complete operational guidance and support.</p>
+                    </div>
+                 </div>
               </div>
-            ))}
+            </div>
+            
+            
+          </div>
+
+          {/* Sidebar CTA */}
+          <div className="lg:col-span-1">
+             <div className="bg-slate-900 rounded-3xl p-8 sticky top-32 shadow-2xl border border-slate-800 text-center">
+                <div className="w-16 h-16 bg-amber-400 rounded-2xl flex items-center justify-center mx-auto mb-6 transform rotate-3 shadow-lg">
+                   <svg className="w-8 h-8 text-slate-900" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M13 10V3L4 14h7v7l9-11h-7z" /></svg>
+                </div>
+                <h3 className="text-2xl font-bold text-white mb-4">Ready to Switch?</h3>
+                <p className="text-slate-300 mb-8">Get a customized quotation for your battery storage today.</p>
+                <Link href="/get-quote" className="block w-full bg-amber-400 text-slate-900 font-bold py-4 rounded-xl hover:bg-amber-500 transition-colors mb-4 shadow-lg">
+                  Request Custom Quote
+                </Link>
+                <a href="https://wa.me/923125634911" target="_blank" rel="noopener noreferrer" className="block w-full bg-[#25D366] text-white font-bold py-4 rounded-xl hover:bg-[#20b858] transition-colors shadow-lg flex justify-center items-center">
+                  <svg className="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
+                  WhatsApp Us
+                </a>
+             </div>
           </div>
         </div>
       </section>
-
-      {/* 6. CASH VS INSTALLMENTS */}
-      <section className="w-full py-20 px-4 sm:px-6 lg:px-8 bg-zinc-50 border-b border-zinc-100">
-        <div className="max-w-5xl mx-auto">
-          <h2 className="text-3xl font-bold text-zinc-900 mb-10 text-center">Cash vs Installments</h2>
-          <div className="overflow-x-auto shadow-sm rounded-lg border border-zinc-200">
-            <table className="w-full text-left bg-white">
-              <thead className="bg-zinc-100 text-zinc-900">
-                <tr>
-                  <th className="px-6 py-4 font-bold border-b border-zinc-200">Factor</th>
-                  <th className="px-6 py-4 font-bold border-b border-zinc-200 border-l">Cash / Upfront</th>
-                  <th className="px-6 py-4 font-bold border-b border-zinc-200 border-l text-emerald-800 bg-emerald-50">Installments</th>
-                </tr>
-              </thead>
-              <tbody className="divide-y divide-zinc-200 text-zinc-700">
-                <tr>
-                  <td className="px-6 py-4 font-medium">Payment method</td>
-                  <td className="px-6 py-4 border-l border-zinc-200">Full payment upfront based on quote</td>
-                  <td className="px-6 py-4 border-l border-zinc-200 bg-emerald-50">Down payment + Scheduled payments</td>
-                </tr>
-                <tr>
-                  <td className="px-6 py-4 font-medium">Quotation</td>
-                  <td className="px-6 py-4 border-l border-zinc-200">Standard tailored quotation</td>
-                  <td className="px-6 py-4 border-l border-zinc-200 bg-emerald-50">Tailored quotation + Payment options</td>
-                </tr>
-                <tr>
-                  <td className="px-6 py-4 font-medium">System selection</td>
-                  <td className="px-6 py-4 border-l border-zinc-200">All configurations available</td>
-                  <td className="px-6 py-4 border-l border-zinc-200 bg-emerald-50">Subject to financing arrangements</td>
-                </tr>
-                <tr>
-                  <td className="px-6 py-4 font-medium">Payment schedule</td>
-                  <td className="px-6 py-4 border-l border-zinc-200">N/A</td>
-                  <td className="px-6 py-4 border-l border-zinc-200 bg-emerald-50 font-semibold text-emerald-700">Based on confirmed terms</td>
-                </tr>
-                <tr>
-                  <td className="px-6 py-4 font-medium">Approval/eligibility</td>
-                  <td className="px-6 py-4 border-l border-zinc-200">Immediate based on quote acceptance</td>
-                  <td className="px-6 py-4 border-l border-zinc-200 bg-emerald-50">Subject to review and applicable terms</td>
-                </tr>
-                <tr>
-                  <td className="px-6 py-4 font-medium">Installation</td>
-                  <td className="px-6 py-4 border-l border-zinc-200">Scheduled post-payment</td>
-                  <td className="px-6 py-4 border-l border-zinc-200 bg-emerald-50">Scheduled post-agreement</td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
-        </div>
-      </section>
-
-      {/* 7 & 8. WHAT AFFECTS COST & REQUIRED INFO */}
-      <section className="w-full py-20 px-4 sm:px-6 lg:px-8 bg-white border-b border-zinc-100">
-        <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-16">
-          <div>
-            <h2 className="text-3xl font-bold text-zinc-900 mb-6">What Affects the Final Cost?</h2>
-            <p className="text-zinc-600 mb-6">The final quotation depends entirely on your specific property and selected components:</p>
-            <ul className="space-y-3">
-              {['System size', 'Electricity consumption', 'Solar panel selection', 'Inverter selection', 'Battery requirement', 'Mounting structure', 'Protection equipment', 'Installation requirements', 'Property/site conditions', 'Selected payment option'].map((item, i) => (
-                <li key={i} className="flex items-center text-zinc-700"><div className="w-2 h-2 bg-emerald-500 rounded-full mr-3"></div>{item}</li>
-              ))}
-            </ul>
-          </div>
-          <div className="bg-zinc-50 p-8 rounded-xl border border-zinc-200">
-            <h2 className="text-2xl font-bold text-zinc-900 mb-6">Information We May Need for Your Quote</h2>
-            <ul className="space-y-3 mb-8">
-              {['Full name', 'Phone number', 'WhatsApp number', 'City (Islamabad/Rawalpindi)', 'Area', 'Property type', 'Monthly electricity bill', 'Desired system size', 'Cash or installment preference', 'Electricity bill document (if available)'].map((item, i) => (
-                <li key={i} className="flex items-center text-zinc-700"><svg className="w-5 h-5 text-zinc-400 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7"></path></svg>{item}</li>
-              ))}
-            </ul>
-            <Link href="/get-quote" className="block text-center w-full bg-emerald-600 text-white font-bold py-4 rounded-md hover:bg-emerald-700 transition">
-              Start My Quote
-            </Link>
-          </div>
-        </div>
-      </section>
-
-      {/* 9. FAQ */}
-      <section className="w-full py-20 px-4 sm:px-6 lg:px-8 bg-zinc-50 border-b border-zinc-100">
-        <div className="max-w-5xl mx-auto">
-          <h2 className="text-3xl font-bold text-zinc-900 mb-10 text-center">Installment FAQs</h2>
-          <FAQAccordion items={faqs} />
-        </div>
-      </section>
-
-      {/* 10. TRUST SECTION */}
-      <section className="w-full py-16 px-4 sm:px-6 lg:px-8 bg-white border-b border-zinc-100 text-center">
-        <div className="max-w-4xl mx-auto">
-          <h2 className="text-3xl font-bold text-zinc-900 mb-4">Clear quotations. Clear payment terms. No hidden promises.</h2>
-          <p className="text-zinc-600 text-lg">We prioritize absolute transparency in all our pricing and installment arrangements.</p>
-        </div>
-      </section>
-
-      {/* 11. FINAL CTA */}
-      <section className="w-full py-24 px-4 sm:px-6 lg:px-8 bg-zinc-950 text-center text-white">
-        <div className="max-w-3xl mx-auto">
-          <h2 className="text-4xl md:text-5xl font-bold mb-6">Ready to Explore Solar on Installments?</h2>
-          <p className="text-xl text-zinc-400 mb-10">Tell us about your property and electricity usage to request a solar quotation.</p>
-          <div className="flex flex-col sm:flex-row justify-center gap-4">
-            <Link href="/get-quote" className="bg-emerald-600 text-white font-bold px-8 py-4 rounded-md hover:bg-emerald-700 transition">
-              Get Your Free Solar Quote
-            </Link>
-            <a href="https://wa.me/03125634911" className="border border-zinc-600 bg-zinc-800 text-white font-bold px-8 py-4 rounded-md hover:bg-zinc-700 transition flex items-center justify-center gap-2">
-              Chat on WhatsApp
-            </a>
-          </div>
-        </div>
-      </section>
-      
-      {/* 12. INTERNAL LINKS */}
-      <section className="w-full py-8 px-4 sm:px-6 lg:px-8 bg-zinc-900 text-center">
-        <div className="flex flex-wrap justify-center gap-4 text-sm text-zinc-400">
-          <Link href="/solar-installation-islamabad" className="hover:text-white transition">Solar Installation Islamabad</Link>
-          <Link href="/solar-installation-rawalpindi" className="hover:text-white transition">Solar Installation Rawalpindi</Link>
-          <Link href="/solar-system-price-islamabad" className="hover:text-white transition">Islamabad Prices</Link>
-          <Link href="/solar-system-price-rawalpindi" className="hover:text-white transition">Rawalpindi Prices</Link>
-        </div>
-      </section>
-
-    </div>
+    </main>
   );
 }
