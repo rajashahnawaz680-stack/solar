@@ -297,33 +297,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* 11. PROJECTS / WORK */}
-      <section className="w-full py-20 px-4 sm:px-6 lg:px-8 bg-zinc-50 border-b border-zinc-100">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl font-bold text-zinc-900 mb-4">Our Solar Projects</h2>
-            <p className="text-lg text-zinc-600 max-w-2xl mx-auto">A glimpse into our recent installations.</p>
-          </div>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {/* 
-              DEVELOPER NOTE:
-              Insert verified project data and real images here. 
-              Do not use fake project sizes or locations.
-            */}
-            {[1, 2, 3].map((item) => (
-              <div key={item} className="bg-white rounded-xl overflow-hidden shadow-sm border border-zinc-200">
-                <div className="w-full h-48 bg-zinc-200 flex items-center justify-center text-zinc-400">
-                  [Project Image Placeholder]
-                </div>
-                <div className="p-6">
-                  <h4 className="font-bold text-zinc-900 mb-2">[Project Name / Size]</h4>
-                  <p className="text-zinc-600 text-sm">[Factual project description and location placeholder]</p>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
+      <ProjectGallery />
 
       {/* 12. TRUST SECTION */}
       <section className="w-full py-16 px-4 sm:px-6 lg:px-8 bg-white border-b border-zinc-100">
