@@ -4,6 +4,7 @@ import FeaturedProjects from '@/components/FeaturedProjects';
 import LocationsSelector from '@/components/LocationsSelector';
 import WhatWeDo from '@/components/WhatWeDo';
 import WhySolarKcky from '@/components/WhySolarKcky';
+import SolarSolutions from '@/components/SolarSolutions';
 import FinalCTA from '@/components/FinalCTA';
 import Image from 'next/image';
 
