@@ -157,71 +157,94 @@ export default function Home() {
         </div>
       </section>
 
-      {/* 4. SOLAR SOLUTIONS */}
-      <section className="py-24 bg-slate-50 border-y border-slate-100">
+            {/* NEW: SOLAR SOLUTIONS SHOWCASE */}
+      <section className="py-24 bg-slate-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-5xl font-extrabold text-slate-900 mb-4 tracking-tight">Solar Solutions</h2>
-            <p className="text-lg text-slate-600 max-w-2xl mx-auto">Discover the perfect solar configuration for your energy demands.</p>
+            <h2 className="text-4xl md:text-5xl font-extrabold text-slate-900 mb-6 tracking-tight">Solar Solutions Designed Around Your Energy Needs</h2>
+            <p className="text-xl text-slate-600 max-w-3xl mx-auto">Explore residential, commercial, on-grid and hybrid solar solutions for properties across Islamabad and Rawalpindi.</p>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {[ 
-               { title: "Residential Solar", link: "/solar-installation-islamabad", img: "https://images.unsplash.com/photo-1613665813446-82a78c468a1d?auto=format&fit=crop&w=800&q=80", desc: "Premium home solar setups." },
-               { title: "Commercial Solar", link: "/solar-installation-rawalpindi", img: "https://images.unsplash.com/photo-1508514177221-188b1c77eca2?auto=format&fit=crop&w=800&q=80", desc: "Large-scale business systems." },
-               { title: "On-Grid Solar", link: "/on-grid-solar-system", img: "https://images.unsplash.com/photo-1548614606-52b4451f994b?auto=format&fit=crop&w=800&q=80", desc: "Grid-synchronized cost savers." },
-               { title: "Hybrid Solar", link: "/hybrid-solar-system", img: "https://images.unsplash.com/photo-1592833159155-c62df1b65634?auto=format&fit=crop&w=800&q=80", desc: "Grid + Battery backup protection." },
-               { title: "Battery Storage", link: "/solar-on-installments", img: "https://images.unsplash.com/photo-1509391366360-51590d6350f5?auto=format&fit=crop&w=800&q=80", desc: "Energy storage for blackout safety." }
-            ].map((sol, i) => (
-              <Link href={sol.link} key={i} className="group bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 border border-slate-100 flex flex-col h-full transform hover:-translate-y-1">
-                <div className="relative h-48 w-full overflow-hidden bg-slate-200">
-                  <img src={sol.img} alt={sol.title} loading="lazy" className="object-cover w-full h-full transition-transform duration-700 group-hover:scale-110" />
-                  <div className="absolute inset-0 bg-slate-900/10 group-hover:bg-slate-900/30 transition-colors"></div>
-                </div>
-                <div className="p-6 flex-1 flex flex-col justify-between">
-                  <div>
-                     <h3 className="text-xl font-bold text-slate-900 mb-2">{sol.title}</h3>
-                     <p className="text-slate-600 text-sm mb-4">{sol.desc}</p>
-                  </div>
-                  <span className="text-amber-500 font-bold text-sm flex items-center group-hover:text-amber-600 transition-colors">
-                    Explore Solution <svg className="w-4 h-4 ml-1 transform group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M14 5l7 7m0 0l-7 7m7-7H3" /></svg>
-                  </span>
-                </div>
-              </Link>
-            ))}
-          </div>
-        </div>
-      </section>
 
-      {/* 5. SYSTEM OPTIONS */}
-      <section className="py-24 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-5xl font-extrabold text-slate-900 mb-4 tracking-tight">System Options</h2>
-            <p className="text-lg text-slate-600 max-w-2xl mx-auto">Standard capacities suitable for various property sizes.</p>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
+             {/* 1. Residential Solar */}
+             <Link href="/solar-installation-islamabad" className="group relative rounded-3xl overflow-hidden shadow-lg h-96 md:h-[500px] border border-slate-200 block cursor-pointer">
+                <img src="https://images.unsplash.com/photo-1509391366360-51590d6350f5?auto=format&fit=crop&w=1200&q=80" alt="Residential Solar" className="absolute inset-0 w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-700" />
+                <div className="absolute inset-0 bg-gradient-to-t from-slate-900 via-slate-900/60 to-transparent opacity-90"></div>
+                <div className="absolute inset-0 p-8 md:p-12 flex flex-col justify-end">
+                   <span className="text-amber-400 font-bold uppercase tracking-wider text-sm mb-2">Home Solutions</span>
+                   <h3 className="text-4xl font-extrabold text-white mb-3">Residential Solar</h3>
+                   <p className="text-slate-300 mb-6 max-w-md">Complete rooftop solar installations designed to drastically reduce home utility bills.</p>
+                   <span className="inline-block border-b-2 border-amber-400 text-white font-bold pb-1 self-start group-hover:text-amber-400 transition-colors">Explore Solution &rarr;</span>
+                </div>
+             </Link>
+
+             {/* 2. Commercial Solar */}
+             <Link href="/solar-installation-rawalpindi" className="group relative rounded-3xl overflow-hidden shadow-lg h-96 md:h-[500px] border border-slate-200 block cursor-pointer">
+                <img src="https://images.unsplash.com/photo-1508514177221-188b1c77eca2?auto=format&fit=crop&w=1200&q=80" alt="Commercial Solar" className="absolute inset-0 w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-700" />
+                <div className="absolute inset-0 bg-gradient-to-t from-slate-900 via-slate-900/60 to-transparent opacity-90"></div>
+                <div className="absolute inset-0 p-8 md:p-12 flex flex-col justify-end">
+                   <span className="text-amber-400 font-bold uppercase tracking-wider text-sm mb-2">Business Solutions</span>
+                   <h3 className="text-4xl font-extrabold text-white mb-3">Commercial Solar</h3>
+                   <p className="text-slate-300 mb-6 max-w-md">Heavy-duty architectures engineered to protect margins and provide reliable power.</p>
+                   <span className="inline-block border-b-2 border-amber-400 text-white font-bold pb-1 self-start group-hover:text-amber-400 transition-colors">Explore Solution &rarr;</span>
+                </div>
+             </Link>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
-            <Link href="/5kw-solar-system" className="bg-slate-50 border border-slate-200 rounded-2xl p-8 text-center hover:border-amber-400 hover:shadow-lg transition-all">
-              <h3 className="text-3xl font-extrabold text-slate-900 mb-2">5kW</h3>
-              <p className="text-slate-600 mb-6 font-medium">Standard Residential</p>
-              <span className="inline-block bg-slate-900 text-white font-bold py-2.5 px-6 rounded-lg text-sm group-hover:bg-amber-500">View System Details</span>
-            </Link>
-            <Link href="/10kw-solar-system" className="bg-slate-900 border border-slate-800 rounded-2xl p-8 text-center shadow-xl transform md:-translate-y-4 relative overflow-hidden">
-              <div className="absolute top-0 inset-x-0 h-1 bg-amber-400"></div>
-              <h3 className="text-3xl font-extrabold text-white mb-2">10kW</h3>
-              <p className="text-slate-300 mb-6 font-medium">Large Residential / Small Business</p>
-              <span className="inline-block bg-amber-400 text-slate-900 font-bold py-2.5 px-6 rounded-lg text-sm">View System Details</span>
-            </Link>
-            <Link href="/15kw-solar-system" className="bg-slate-50 border border-slate-200 rounded-2xl p-8 text-center hover:border-amber-400 hover:shadow-lg transition-all">
-              <h3 className="text-3xl font-extrabold text-slate-900 mb-2">15kW</h3>
-              <p className="text-slate-600 mb-6 font-medium">Commercial Grade</p>
-              <span className="inline-block bg-slate-900 text-white font-bold py-2.5 px-6 rounded-lg text-sm group-hover:bg-amber-500">View System Details</span>
-            </Link>
-          </div>
-          <div className="text-center bg-amber-50 rounded-2xl p-8 border border-amber-100 max-w-3xl mx-auto">
-             <h4 className="text-xl font-bold text-slate-900 mb-2">Need a Different System Size?</h4>
-             <p className="text-slate-600 mb-6">We provide custom engineered systems ranging from 3kW to 100kW+.</p>
-             <Link href="/get-quote" className="inline-block bg-amber-400 text-slate-900 font-bold px-8 py-3 rounded-lg hover:bg-amber-500 transition-colors shadow-sm">
-                Request Custom Quote
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-6">
+             {/* 3. 5kW System */}
+             <Link href="/5kw-solar-system" className="group relative rounded-3xl overflow-hidden shadow-md h-80 border border-slate-200 block cursor-pointer">
+                <img src="https://images.unsplash.com/photo-1613665813446-82a78c468a1d?auto=format&fit=crop&w=800&q=80" alt="5kW Solar System" className="absolute inset-0 w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-700" />
+                <div className="absolute inset-0 bg-gradient-to-t from-slate-900 via-slate-900/80 to-slate-900/10"></div>
+                <div className="absolute inset-0 p-6 flex flex-col justify-end">
+                   <h3 className="text-2xl font-extrabold text-white mb-2">5kW System</h3>
+                   <p className="text-slate-300 text-sm mb-4">Perfect for standard residential properties.</p>
+                   <span className="text-amber-400 text-sm font-bold group-hover:text-white transition-colors">Details &rarr;</span>
+                </div>
+             </Link>
+
+             {/* 4. 10kW System */}
+             <Link href="/10kw-solar-system" className="group relative rounded-3xl overflow-hidden shadow-md h-80 border border-slate-200 block cursor-pointer">
+                <img src="https://images.unsplash.com/photo-1592833159155-c62df1b65634?auto=format&fit=crop&w=800&q=80" alt="10kW Solar System" className="absolute inset-0 w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-700" />
+                <div className="absolute inset-0 bg-gradient-to-t from-slate-900 via-slate-900/80 to-slate-900/10"></div>
+                <div className="absolute inset-0 p-6 flex flex-col justify-end">
+                   <h3 className="text-2xl font-extrabold text-white mb-2">10kW System</h3>
+                   <p className="text-slate-300 text-sm mb-4">Ideal for larger homes and multiple ACs.</p>
+                   <span className="text-amber-400 text-sm font-bold group-hover:text-white transition-colors">Details &rarr;</span>
+                </div>
+             </Link>
+
+             {/* 5. 15kW System */}
+             <Link href="/15kw-solar-system" className="group relative rounded-3xl overflow-hidden shadow-md h-80 border border-slate-200 block cursor-pointer">
+                <img src="https://images.unsplash.com/photo-1548614606-52b4451f994b?auto=format&fit=crop&w=800&q=80" alt="15kW Solar System" className="absolute inset-0 w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-700" />
+                <div className="absolute inset-0 bg-gradient-to-t from-slate-900 via-slate-900/80 to-slate-900/10"></div>
+                <div className="absolute inset-0 p-6 flex flex-col justify-end">
+                   <h3 className="text-2xl font-extrabold text-white mb-2">15kW System</h3>
+                   <p className="text-slate-300 text-sm mb-4">Designed for commercial sites and large villas.</p>
+                   <span className="text-amber-400 text-sm font-bold group-hover:text-white transition-colors">Details &rarr;</span>
+                </div>
+             </Link>
+             
+             {/* 6. Hybrid System */}
+             <Link href="/hybrid-solar-system" className="group relative rounded-3xl overflow-hidden shadow-md h-80 border border-slate-200 block cursor-pointer">
+                <img src="https://images.unsplash.com/photo-1620803453880-977759567ac8?auto=format&fit=crop&w=800&q=80" alt="Hybrid Solar System" className="absolute inset-0 w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-700" />
+                <div className="absolute inset-0 bg-gradient-to-t from-slate-900 via-slate-900/80 to-slate-900/10"></div>
+                <div className="absolute inset-0 p-6 flex flex-col justify-end">
+                   <h3 className="text-2xl font-extrabold text-white mb-2">Hybrid System</h3>
+                   <p className="text-slate-300 text-sm mb-4">Solar + Battery storage for load shedding.</p>
+                   <span className="text-amber-400 text-sm font-bold group-hover:text-white transition-colors">Details &rarr;</span>
+                </div>
+             </Link>
+
+             {/* 7. On-Grid System */}
+             <Link href="/on-grid-solar-system" className="group relative rounded-3xl overflow-hidden shadow-md h-80 border border-slate-200 block cursor-pointer">
+                <img src="https://images.unsplash.com/photo-1605980776566-0486c3ac7617?auto=format&fit=crop&w=800&q=80" alt="On-Grid Solar System" className="absolute inset-0 w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-700" />
+                <div className="absolute inset-0 bg-gradient-to-t from-slate-900 via-slate-900/80 to-slate-900/10"></div>
+                <div className="absolute inset-0 p-6 flex flex-col justify-end">
+                   <h3 className="text-2xl font-extrabold text-white mb-2">On-Grid System</h3>
+                   <p className="text-slate-300 text-sm mb-4">Maximum ROI using grid connection without batteries.</p>
+                   <span className="text-amber-400 text-sm font-bold group-hover:text-white transition-colors">Details &rarr;</span>
+                </div>
              </Link>
           </div>
         </div>
