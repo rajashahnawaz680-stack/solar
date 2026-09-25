@@ -1,34 +1,11 @@
 import Link from 'next/link';
-import ProjectGallery from '@/components/ProjectGallery';
-import type { Metadata } from 'next';
-
-import FAQAccordion from '@/components/FAQAccordion';
-
-export const metadata: Metadata = {
-  title: "Solar Installation Islamabad & Rawalpindi | Solar KCKY",
-  description: "Explore professional solar installation for your home or business in Islamabad and Rawalpindi. Cash and installment options available.",
-  keywords: "Solar Installation Islamabad, Solar Installation Rawalpindi, Solar Company Islamabad, Solar Company Rawalpindi, Solar System Islamabad, Solar System Rawalpindi, Solar on Installments Islamabad, Solar on Installments Rawalpindi",
-  alternates: { canonical: '/' },
-  openGraph: {
-    title: "Solar Installation in Islamabad & Rawalpindi",
-    description: "Expert solar installation with cash and installment payment options in Islamabad and Rawalpindi.",
-    url: '/',
-    siteName: 'Solar KCKY',
-    type: 'website',
-  },
-};
+import Calculator from '@/components/Calculator';
+import FeaturedProjects from '@/components/FeaturedProjects';
+import Image from 'next/image';
 
 export default function Home() {
-  const faqs = [
-    { question: "How do I know which solar system size I need?", answer: "The right system size depends on your monthly electricity consumption, roof space, and budget. Contact us for a free assessment." },
-    { question: "Can I pay for a solar system in installments?", answer: "Yes, we offer installment options for solar systems. Eligibility and terms are confirmed during the quotation process." },
-    { question: "How can I request a solar quotation?", answer: "You can request a free solar quote by filling out our Quote Form, sending us a message on WhatsApp, or calling us directly." },
-    { question: "What information do you need for a solar quote?", answer: "To provide an accurate quote, we need to know your average monthly electricity bill, property type, and your location." }
-  ];
-
   return (
-    <div className="w-full flex flex-col bg-white">
-      
+    <main className="min-h-screen flex flex-col bg-white">
       {/* 1. HERO SECTION */}
       <section className="relative w-full min-h-[90vh] flex items-center justify-center pt-20 overflow-hidden bg-slate-900">
         {/* Background Image with Overlay */}
@@ -101,305 +78,218 @@ export default function Home() {
         </div>
       </section>
 
-      {/* 2. CASH + INSTALLMENT OPTIONS */}
-      <section className="w-full py-20 px-4 sm:px-6 lg:px-8 bg-zinc-50 border-b border-zinc-100">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-zinc-900 mb-4">Flexible Purchase Options</h2>
-            <p className="text-lg text-zinc-600 max-w-2xl mx-auto">Choose the payment method that best suits your financial goals and requirements.</p>
-          </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
-            {/* Cash Card */}
-            <div className="bg-white p-10 rounded-2xl shadow-sm border border-zinc-200 flex flex-col h-full">
-              <div className="w-14 h-14 bg-zinc-100 text-zinc-900 rounded-xl flex items-center justify-center mb-6">
-                <svg className="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17 9V7a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2m2 4h10a2 2 0 002-2v-6a2 2 0 00-2-2H9a2 2 0 00-2 2v6a2 2 0 002 2zm7-5a2 2 0 11-4 0 2 2 0 014 0z"></path></svg>
-              </div>
-              <h3 className="text-2xl font-bold text-zinc-900 mb-4">Pay in Cash</h3>
-              <p className="text-zinc-600 leading-relaxed mb-8 flex-grow">
-                Customers can request a quotation for their selected solar system and proceed with an upfront payment according to the confirmed quotation and agreed payment terms.
-              </p>
-              <Link href="/get-quote" className="inline-flex justify-center items-center bg-zinc-900 text-white font-semibold px-6 py-3 rounded-md hover:bg-zinc-800 transition">
-                Get Cash Quote
-              </Link>
+      {/* 1. TRUST/SERVICE STRIP */}
+      <section className="bg-slate-900 border-t border-slate-800 py-8 relative z-20">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
+            <div className="flex flex-col items-center">
+              <svg className="w-8 h-8 text-amber-400 mb-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" /></svg>
+              <span className="text-white font-bold text-sm uppercase tracking-wide">Professional Installation</span>
             </div>
-            
-            {/* Installment Card */}
-            <div className="bg-emerald-50 p-10 rounded-2xl shadow-sm border border-emerald-100 flex flex-col h-full">
-              <div className="w-14 h-14 bg-emerald-600 text-white rounded-xl flex items-center justify-center mb-6">
-                <svg className="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path></svg>
-              </div>
-              <h3 className="text-2xl font-bold text-zinc-900 mb-4">Pay in Installments</h3>
-              <p className="text-zinc-600 leading-relaxed mb-8 flex-grow">
-                Customers can request information about available solar installment options. Final eligibility, payment schedules, down payments, and other terms are confirmed during the quotation process.
-              </p>
-              <Link href="/solar-on-installments" className="inline-flex justify-center items-center bg-emerald-600 text-white font-semibold px-6 py-3 rounded-md hover:bg-emerald-700 transition shadow-sm">
-                Explore Installments
-              </Link>
+            <div className="flex flex-col items-center">
+              <svg className="w-8 h-8 text-amber-400 mb-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" /></svg>
+              <span className="text-white font-bold text-sm uppercase tracking-wide">Residential & Commercial</span>
+            </div>
+            <div className="flex flex-col items-center">
+              <svg className="w-8 h-8 text-amber-400 mb-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" d="M13 10V3L4 14h7v7l9-11h-7z" /></svg>
+              <span className="text-white font-bold text-sm uppercase tracking-wide">On-Grid & Hybrid</span>
+            </div>
+            <div className="flex flex-col items-center">
+              <svg className="w-8 h-8 text-amber-400 mb-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.243-4.243a8 8 0 1111.314 0z" /><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" /></svg>
+              <span className="text-white font-bold text-sm uppercase tracking-wide">Islamabad & Rawalpindi</span>
             </div>
           </div>
         </div>
       </section>
 
-      {/* 3. WHY CONSIDER SOLAR */}
-      <section className="w-full py-20 px-4 sm:px-6 lg:px-8 bg-white border-b border-zinc-100">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-zinc-900 mb-4">Why Consider Solar Energy?</h2>
-            <p className="text-lg text-zinc-600 max-w-2xl mx-auto">Educational insights on switching to solar for your property.</p>
-          </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {[
-              { title: "Reduce Grid Dependence", desc: "Generate your own electricity and reduce your reliance on traditional grid power." },
-              { title: "Clean Energy Generation", desc: "Harness solar energy to generate electricity efficiently using modern technology." },
-              { title: "Flexible System Options", desc: "Choose from On-Grid, Hybrid, and various kW capacities tailored to your needs." },
-              { title: "Residential & Commercial", desc: "Professional solutions designed for both homes and large business properties." },
-              { title: "Cash & Installment Purchasing", desc: "Flexible buying options including upfront cash payments and structured installments." },
-              { title: "Professional Installation", desc: "End-to-end technical assessment, equipment selection, and careful installation." }
-            ].map((item, i) => (
-              <div key={i} className="p-6 bg-zinc-50 border border-zinc-100 rounded-xl">
-                
-                <h3 className="text-xl font-bold text-zinc-900 mb-2">{item.title}</h3>
-                <p className="text-zinc-600">{item.desc}</p>
+      {/* 2. SOLAR POTENTIAL CALCULATOR */}
+      <Calculator />
+
+      {/* 3. WHY SOLAR */}
+      <section className="py-24 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+            <div className="relative aspect-[4/3] rounded-2xl overflow-hidden shadow-2xl">
+              <img src="https://images.unsplash.com/photo-1509391366360-51590d6350f5?auto=format&fit=crop&w=1200&q=80" alt="Solar Home" loading="lazy" className="object-cover w-full h-full" />
+            </div>
+            <div>
+              <h2 className="text-3xl md:text-5xl font-extrabold text-slate-900 mb-8 tracking-tight">Why More Homeowners Are Switching to Solar</h2>
+              <div className="space-y-8">
+                <div className="flex items-start">
+                  <div className="flex-shrink-0 w-12 h-12 bg-amber-400/10 rounded-full flex items-center justify-center border border-amber-400/20 mr-4">
+                    <svg className="w-6 h-6 text-amber-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M13 10V3L4 14h7v7l9-11h-7z" /></svg>
+                  </div>
+                  <div>
+                    <h3 className="text-xl font-bold text-slate-900 mb-2">Reduce Grid Dependence</h3>
+                    <p className="text-slate-600">Lower your monthly electricity bills and protect yourself from rising grid energy costs.</p>
+                  </div>
+                </div>
+                <div className="flex items-start">
+                  <div className="flex-shrink-0 w-12 h-12 bg-amber-400/10 rounded-full flex items-center justify-center border border-amber-400/20 mr-4">
+                    <svg className="w-6 h-6 text-amber-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9" /></svg>
+                  </div>
+                  <div>
+                    <h3 className="text-xl font-bold text-slate-900 mb-2">Clean Energy</h3>
+                    <p className="text-slate-600">Reduce your carbon footprint by generating your own clean, renewable energy directly from the sun.</p>
+                  </div>
+                </div>
+                <div className="flex items-start">
+                  <div className="flex-shrink-0 w-12 h-12 bg-amber-400/10 rounded-full flex items-center justify-center border border-amber-400/20 mr-4">
+                    <svg className="w-6 h-6 text-amber-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 6V4m0 2a2 2 0 100 4m0-4a2 2 0 110 4m-6 8a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4m6 6v10m6-2a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4" /></svg>
+                  </div>
+                  <div>
+                    <h3 className="text-xl font-bold text-slate-900 mb-2">Flexible System Options</h3>
+                    <p className="text-slate-600">From pure grid-tie systems to full hybrid battery backups, tailor your system to your lifestyle.</p>
+                  </div>
+                </div>
+                <div className="flex items-start">
+                  <div className="flex-shrink-0 w-12 h-12 bg-amber-400/10 rounded-full flex items-center justify-center border border-amber-400/20 mr-4">
+                    <svg className="w-6 h-6 text-amber-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" /></svg>
+                  </div>
+                  <div>
+                    <h3 className="text-xl font-bold text-slate-900 mb-2">Residential & Commercial Solutions</h3>
+                    <p className="text-slate-600">Scalable technology that powers everything from small homes to large industrial facilities.</p>
+                  </div>
+                </div>
               </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* 4. SOLAR SOLUTIONS */}
+      <section className="py-24 bg-slate-50 border-y border-slate-100">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-5xl font-extrabold text-slate-900 mb-4 tracking-tight">Solar Solutions</h2>
+            <p className="text-lg text-slate-600 max-w-2xl mx-auto">Discover the perfect solar configuration for your energy demands.</p>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {[ 
+               { title: "Residential Solar", link: "/solar-installation-islamabad", img: "https://images.unsplash.com/photo-1613665813446-82a78c468a1d?auto=format&fit=crop&w=800&q=80", desc: "Premium home solar setups." },
+               { title: "Commercial Solar", link: "/solar-installation-rawalpindi", img: "https://images.unsplash.com/photo-1508514177221-188b1c77eca2?auto=format&fit=crop&w=800&q=80", desc: "Large-scale business systems." },
+               { title: "On-Grid Solar", link: "/on-grid-solar-system", img: "https://images.unsplash.com/photo-1548614606-52b4451f994b?auto=format&fit=crop&w=800&q=80", desc: "Grid-synchronized cost savers." },
+               { title: "Hybrid Solar", link: "/hybrid-solar-system", img: "https://images.unsplash.com/photo-1592833159155-c62df1b65634?auto=format&fit=crop&w=800&q=80", desc: "Grid + Battery backup protection." },
+               { title: "Battery Storage", link: "/solar-on-installments", img: "https://images.unsplash.com/photo-1509391366360-51590d6350f5?auto=format&fit=crop&w=800&q=80", desc: "Energy storage for blackout safety." }
+            ].map((sol, i) => (
+              <Link href={sol.link} key={i} className="group bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 border border-slate-100 flex flex-col h-full transform hover:-translate-y-1">
+                <div className="relative h-48 w-full overflow-hidden bg-slate-200">
+                  <img src={sol.img} alt={sol.title} loading="lazy" className="object-cover w-full h-full transition-transform duration-700 group-hover:scale-110" />
+                  <div className="absolute inset-0 bg-slate-900/10 group-hover:bg-slate-900/30 transition-colors"></div>
+                </div>
+                <div className="p-6 flex-1 flex flex-col justify-between">
+                  <div>
+                     <h3 className="text-xl font-bold text-slate-900 mb-2">{sol.title}</h3>
+                     <p className="text-slate-600 text-sm mb-4">{sol.desc}</p>
+                  </div>
+                  <span className="text-amber-500 font-bold text-sm flex items-center group-hover:text-amber-600 transition-colors">
+                    Explore Solution <svg className="w-4 h-4 ml-1 transform group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M14 5l7 7m0 0l-7 7m7-7H3" /></svg>
+                  </span>
+                </div>
+              </Link>
             ))}
           </div>
         </div>
       </section>
 
-      {/* 4. SOLAR SYSTEM OPTIONS */}
-      <section className="w-full py-20 px-4 sm:px-6 lg:px-8 bg-zinc-50 border-b border-zinc-100">
-        <div className="max-w-7xl mx-auto">
-          <div className="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-6">
-            <div>
-              <h2 className="text-3xl md:text-4xl font-bold text-zinc-900 mb-4">Solar System Options</h2>
-              <p className="text-lg text-zinc-600 max-w-2xl">Explore our standard system sizes and topologies.</p>
-            </div>
-            <Link href="/get-quote" className="text-emerald-600 font-semibold hover:text-emerald-700 flex items-center gap-1">
-              Need a custom size? Get a Quote <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 5l7 7-7 7"></path></svg>
+      {/* 5. SYSTEM OPTIONS */}
+      <section className="py-24 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-5xl font-extrabold text-slate-900 mb-4 tracking-tight">System Options</h2>
+            <p className="text-lg text-slate-600 max-w-2xl mx-auto">Standard capacities suitable for various property sizes.</p>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
+            <Link href="/5kw-solar-system" className="bg-slate-50 border border-slate-200 rounded-2xl p-8 text-center hover:border-amber-400 hover:shadow-lg transition-all">
+              <h3 className="text-3xl font-extrabold text-slate-900 mb-2">5kW</h3>
+              <p className="text-slate-600 mb-6 font-medium">Standard Residential</p>
+              <span className="inline-block bg-slate-900 text-white font-bold py-2.5 px-6 rounded-lg text-sm group-hover:bg-amber-500">View System Details</span>
+            </Link>
+            <Link href="/10kw-solar-system" className="bg-slate-900 border border-slate-800 rounded-2xl p-8 text-center shadow-xl transform md:-translate-y-4 relative overflow-hidden">
+              <div className="absolute top-0 inset-x-0 h-1 bg-amber-400"></div>
+              <h3 className="text-3xl font-extrabold text-white mb-2">10kW</h3>
+              <p className="text-slate-300 mb-6 font-medium">Large Residential / Small Business</p>
+              <span className="inline-block bg-amber-400 text-slate-900 font-bold py-2.5 px-6 rounded-lg text-sm">View System Details</span>
+            </Link>
+            <Link href="/15kw-solar-system" className="bg-slate-50 border border-slate-200 rounded-2xl p-8 text-center hover:border-amber-400 hover:shadow-lg transition-all">
+              <h3 className="text-3xl font-extrabold text-slate-900 mb-2">15kW</h3>
+              <p className="text-slate-600 mb-6 font-medium">Commercial Grade</p>
+              <span className="inline-block bg-slate-900 text-white font-bold py-2.5 px-6 rounded-lg text-sm group-hover:bg-amber-500">View System Details</span>
             </Link>
           </div>
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {[
-              { size: "5kW", link: "/5kw-solar-system", suitable: "Small homes & minimal appliances" },
-              { size: "10kW", link: "/10kw-solar-system", suitable: "Medium homes & standard usage" },
-              { size: "15kW", link: "/15kw-solar-system", suitable: "Large homes & commercial spaces" }
-            ].map((sys, i) => (
-              <div key={i} className="bg-white p-8 rounded-xl border border-zinc-200 shadow-sm hover:shadow-md transition flex flex-col">
-                <h3 className="text-2xl font-bold text-zinc-900 mb-2">{sys.size} Solar System</h3>
-                <p className="text-zinc-600 mb-6 flex-grow">A reliable solar setup. Suitable for: <span className="font-medium text-zinc-800">{sys.suitable}</span>.</p>
-                <Link href={sys.link} className="text-center w-full py-3 bg-zinc-100 text-zinc-800 font-semibold rounded-md hover:bg-zinc-200 transition">
-                  View Details
-                </Link>
-              </div>
-            ))}
-            
-            <div className="bg-zinc-900 text-white p-8 rounded-xl shadow-sm flex flex-col lg:col-span-1 md:col-span-2">
-              <h3 className="text-2xl font-bold mb-2">Hybrid Solar System</h3>
-              <p className="text-zinc-400 mb-6 flex-grow">Includes battery storage support for usage during grid outages.</p>
-              <Link href="/hybrid-solar-system" className="text-center w-full py-3 bg-emerald-600 text-white font-semibold rounded-md hover:bg-emerald-700 transition">
-                View Hybrid Systems
-              </Link>
-            </div>
-
-            <div className="bg-white p-8 rounded-xl border border-zinc-200 shadow-sm flex flex-col lg:col-span-2 md:col-span-2">
-              <h3 className="text-2xl font-bold text-zinc-900 mb-2">On-Grid Solar System</h3>
-              <p className="text-zinc-600 mb-6 flex-grow">Connects directly to the grid without battery storage, often used for net-metering setups where applicable.</p>
-              <Link href="/on-grid-solar-system" className="text-center w-full md:w-auto px-6 py-3 bg-zinc-100 text-zinc-800 font-semibold rounded-md hover:bg-zinc-200 transition self-start">
-                View On-Grid Systems
-              </Link>
-            </div>
+          <div className="text-center bg-amber-50 rounded-2xl p-8 border border-amber-100 max-w-3xl mx-auto">
+             <h4 className="text-xl font-bold text-slate-900 mb-2">Need a Different System Size?</h4>
+             <p className="text-slate-600 mb-6">We provide custom engineered systems ranging from 3kW to 100kW+.</p>
+             <Link href="/get-quote" className="inline-block bg-amber-400 text-slate-900 font-bold px-8 py-3 rounded-lg hover:bg-amber-500 transition-colors shadow-sm">
+                Request Custom Quote
+             </Link>
           </div>
         </div>
       </section>
 
-      {/* 5. SOLAR INSTALLATION SERVICES */}
-      <section className="w-full py-20 px-4 sm:px-6 lg:px-8 bg-white border-b border-zinc-100">
-        <div className="max-w-7xl mx-auto text-center">
-          <h2 className="text-3xl font-bold text-zinc-900 mb-10">Our Services</h2>
-          <div className="flex flex-wrap justify-center gap-4">
-            {[
-              { name: "Residential Solar Installation", link: "/solar-installation-islamabad" },
-              { name: "Commercial Solar Installation", link: "/solar-installation-rawalpindi" },
-              { name: "Solar Panel Installation", link: "/about" },
-              { name: "On-Grid Solar Systems", link: "/on-grid-solar-system" },
-              { name: "Hybrid Solar Systems", link: "/hybrid-solar-system" },
-              { name: "Solar System Quotation", link: "/get-quote" },
-              { name: "Solar on Installments", link: "/solar-on-installments" }
-            ].map((service, i) => (
-              <Link key={i} href={service.link} className="px-6 py-3 rounded-full border border-zinc-200 text-zinc-700 font-medium hover:border-emerald-500 hover:text-emerald-700 hover:bg-emerald-50 transition">
-                {service.name}
-              </Link>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* 6. ISLAMABAD + RAWALPINDI SERVICE AREAS */}
-      <section className="w-full py-20 px-4 sm:px-6 lg:px-8 bg-zinc-900 text-white">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">Solar Installation in Islamabad & Rawalpindi</h2>
-            <p className="text-lg text-zinc-400 max-w-2xl mx-auto">Dedicated local service and support across the twin cities.</p>
-          </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
-            <div className="bg-zinc-800 border border-zinc-700 p-10 rounded-2xl flex flex-col items-center text-center">
-              <svg className="w-12 h-12 text-emerald-500 mb-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path></svg>
-              <h3 className="text-2xl font-bold mb-4">Islamabad</h3>
-              <p className="text-zinc-300 mb-8 leading-relaxed">
-                We provide professional solar installation services for residential and commercial customers across Islamabad, subject to service availability.
+      {/* 6. WHY SOLAR KCKY */}
+      <section className="py-24 bg-slate-900 text-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+            <div>
+              <h2 className="text-3xl md:text-5xl font-extrabold text-white mb-6 tracking-tight">Why Choose <span className="text-amber-400">Solar KCKY?</span></h2>
+              <p className="text-lg text-slate-300 mb-8 leading-relaxed">
+                As a dedicated provider for Islamabad and Rawalpindi, we deliver engineered solar solutions optimized for local climate and grid conditions.
               </p>
-              <Link href="/solar-installation-islamabad" className="bg-white text-zinc-900 font-bold px-6 py-3 rounded-md hover:bg-zinc-200 transition w-full">
-                Solar Installation Islamabad
-              </Link>
+              <ul className="space-y-4">
+                <li className="flex items-center text-slate-200 font-medium">
+                  <svg className="w-6 h-6 text-amber-400 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7" /></svg>
+                  Expert Local Installers
+                </li>
+                <li className="flex items-center text-slate-200 font-medium">
+                  <svg className="w-6 h-6 text-amber-400 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7" /></svg>
+                  Cash & Installment Payment Options
+                </li>
+                <li className="flex items-center text-slate-200 font-medium">
+                  <svg className="w-6 h-6 text-amber-400 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7" /></svg>
+                  Custom Engineered Systems
+                </li>
+                <li className="flex items-center text-slate-200 font-medium">
+                  <svg className="w-6 h-6 text-amber-400 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7" /></svg>
+                  Dedicated Support
+                </li>
+              </ul>
             </div>
-            <div className="bg-zinc-800 border border-zinc-700 p-10 rounded-2xl flex flex-col items-center text-center">
-              <svg className="w-12 h-12 text-emerald-500 mb-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path></svg>
-              <h3 className="text-2xl font-bold mb-4">Rawalpindi</h3>
-              <p className="text-zinc-300 mb-8 leading-relaxed">
-                We provide professional solar installation services for residential and commercial customers across Rawalpindi, subject to service availability.
-              </p>
-              <Link href="/solar-installation-rawalpindi" className="bg-white text-zinc-900 font-bold px-6 py-3 rounded-md hover:bg-zinc-200 transition w-full">
-                Solar Installation Rawalpindi
-              </Link>
+            <div className="relative aspect-square md:aspect-[4/3] rounded-2xl overflow-hidden border border-slate-700/50 shadow-2xl">
+               <img src="https://images.unsplash.com/photo-1497440001374-f26997328c1b?auto=format&fit=crop&w=800&q=80" alt="Solar installers at work" className="object-cover w-full h-full" loading="lazy" />
             </div>
           </div>
         </div>
       </section>
 
-      {/* 7. HOW IT WORKS */}
-      <section className="w-full py-20 px-4 sm:px-6 lg:px-8 bg-zinc-50 border-b border-zinc-100">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-zinc-900 mb-4">How It Works</h2>
-            <p className="text-lg text-zinc-600 max-w-2xl mx-auto">Our clear, 5-step process from inquiry to installation.</p>
-          </div>
-          
-          <div className="grid grid-cols-1 md:grid-cols-5 gap-6">
-            {[
-              { step: "01", title: "Tell Us About Your Property", desc: "Submit basic information and electricity usage." },
-              { step: "02", title: "Review Your Requirements", desc: "Our team carefully reviews your submitted information." },
-              { step: "03", title: "Receive Your Solar Quote", desc: "Receive a system proposal based on confirmed requirements." },
-              { step: "04", title: "Choose Cash or Installment", desc: "Select the applicable payment option based on terms." },
-              { step: "05", title: "Installation", desc: "After confirmation, the installation process is scheduled." }
-            ].map((item, i) => (
-              <div key={i} className="bg-white p-6 rounded-xl border border-zinc-200 shadow-sm relative pt-12">
-                <div className="absolute top-0 left-6 -translate-y-1/2 w-12 h-12 bg-emerald-600 text-white font-bold text-xl rounded-full flex items-center justify-center border-4 border-zinc-50">
-                  {item.step}
-                </div>
-                <h4 className="font-bold text-zinc-900 mb-2">{item.title}</h4>
-                <p className="text-zinc-600 text-sm leading-relaxed">{item.desc}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
+      {/* 7. FEATURED SOLAR PROJECTS */}
+      <FeaturedProjects />
 
-      {/* 8. FREE SOLAR QUOTE SECTION */}
-      <section id="quote" className="w-full py-20 px-4 sm:px-6 lg:px-8 bg-white border-b border-zinc-100">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-zinc-900 mb-4">Get Your Free Solar Quote</h2>
-            <p className="text-lg text-zinc-600 max-w-2xl mx-auto">Tell us about your electricity usage and property, and our team can help you explore a suitable solar solution.</p>
-          </div>
-          
-          
-        </div>
-      </section>
-
-      {/* 9. WHATSAPP CTA */}
-      <section className="w-full py-16 px-4 sm:px-6 lg:px-8 bg-emerald-50 border-b border-emerald-100 flex justify-center">
-        <div className="max-w-4xl w-full bg-white rounded-2xl shadow-sm border border-emerald-200 p-10 flex flex-col md:flex-row items-center justify-between gap-8">
-          <div>
-            <h2 className="text-3xl font-bold text-zinc-900 mb-2">Have Questions About Solar?</h2>
-            <p className="text-zinc-600 text-lg">Our team is ready to answer your questions via WhatsApp.</p>
-          </div>
-          <a href="https://wa.me/03125634911?text=Hello,%20I%20am%20interested%20in%20solar%20installation%20in%20Islamabad/Rawalpindi.%20I%20would%20like%20to%20know%20about%20cash%20and%20installment%20options." target="_blank" rel="noopener noreferrer" className="flex-shrink-0 bg-emerald-600 text-white font-bold px-8 py-4 rounded-md hover:bg-emerald-700 transition shadow-md flex items-center gap-3">
-            <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
-            Chat on WhatsApp
-          </a>
-        </div>
-      </section>
-
-      {/* 10. INSTALLATION PROCESS */}
-      <section className="w-full py-20 px-4 sm:px-6 lg:px-8 bg-white border-b border-zinc-100">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl font-bold text-zinc-900 mb-4">Professional Installation Process</h2>
-            <p className="text-lg text-zinc-600 max-w-2xl mx-auto">A structured approach to ensure safe and proper solar setup.</p>
-          </div>
-          <div className="grid grid-cols-1 md:grid-cols-5 gap-4">
-            {['Site Assessment', 'System Planning', 'Equipment Selection', 'Installation', 'Testing & Handover'].map((step, idx) => (
-              <div key={idx} className="flex flex-col items-center text-center p-6 border border-zinc-100 rounded-xl bg-zinc-50">
-                <div className="w-10 h-10 bg-zinc-200 text-zinc-600 font-bold rounded-full flex items-center justify-center mb-4">{idx + 1}</div>
-                <h4 className="font-bold text-zinc-900">{step}</h4>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
+      {/* FAQ Block injected safely if exists */}
       
 
-      <ProjectGallery />
-
-      {/* 12. TRUST SECTION */}
-      <section className="w-full py-16 px-4 sm:px-6 lg:px-8 bg-white border-b border-zinc-100">
-        <div className="max-w-7xl mx-auto">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
-            <div className="flex flex-col items-center">
-              <span className="text-emerald-600 font-bold text-xl mb-2">Islamabad & Rawalpindi</span>
-              <span className="text-zinc-600 text-sm">Dedicated Service Area</span>
-            </div>
-            <div className="flex flex-col items-center">
-              <span className="text-emerald-600 font-bold text-xl mb-2">Cash & Installments</span>
-              <span className="text-zinc-600 text-sm">Flexible Options</span>
-            </div>
-            <div className="flex flex-col items-center">
-              <span className="text-emerald-600 font-bold text-xl mb-2">Quote-Based</span>
-              <span className="text-zinc-600 text-sm">Custom System Recommendations</span>
-            </div>
-            <div className="flex flex-col items-center">
-              <span className="text-emerald-600 font-bold text-xl mb-2">Customer Support</span>
-              <span className="text-zinc-600 text-sm">Professional Assistance</span>
-            </div>
-          </div>
+      {/* 8. FINAL CTA */}
+      <section className="relative py-24 bg-slate-900 overflow-hidden">
+        <div className="absolute inset-0 z-0">
+          <img src="https://images.unsplash.com/photo-1613665813446-82a78c468a1d?auto=format&fit=crop&w=1920&q=80" alt="Solar panels background" loading="lazy" className="w-full h-full object-cover opacity-20 mix-blend-overlay" />
+          <div className="absolute inset-0 bg-slate-900/80"></div>
         </div>
-      </section>
-
-      {/* 13. FAQ SECTION */}
-      <section className="w-full py-20 px-4 sm:px-6 lg:px-8 bg-zinc-50 border-b border-zinc-100">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-zinc-900 mb-4">Frequently Asked Questions</h2>
-          </div>
-          <FAQAccordion items={faqs} />
-        </div>
-        <div className="mt-12 text-center">
-          <p className="text-lg text-zinc-600 mb-6">Have another question?</p>
-          <Link href="/contact" className="inline-block bg-zinc-900 text-white font-bold px-8 py-3 rounded-md hover:bg-zinc-800 transition">
-            Ask Your Question
-          </Link>
-        </div>
-      </section>
-
-      {/* 14. FINAL CTA */}
-      <section className="w-full py-24 px-4 sm:px-6 lg:px-8 bg-zinc-950 text-center">
-        <div className="max-w-3xl mx-auto">
-          <h2 className="text-3xl md:text-5xl font-bold text-white mb-6">Ready to Explore Solar for Your Property?</h2>
-          <p className="text-xl text-zinc-400 mb-10">Request a quotation for your home or business in Islamabad or Rawalpindi.</p>
-          <div className="flex flex-col sm:flex-row justify-center gap-4 w-full sm:w-auto">
-            <Link href="/get-quote" className="bg-emerald-600 text-white font-bold px-8 py-4 rounded-md hover:bg-emerald-700 transition text-lg w-full sm:w-auto">
-              Get Your Free Solar Quote
+        <div className="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <h2 className="text-4xl md:text-6xl font-extrabold text-white mb-6 tracking-tight">Ready to Explore Solar?</h2>
+          <p className="text-xl text-slate-300 mb-10 max-w-2xl mx-auto">
+            Take the first step towards clean, reliable energy. Get your free assessment today.
+          </p>
+          <div className="flex flex-col sm:flex-row justify-center items-center gap-5">
+            <Link href="/get-quote" className="bg-amber-400 text-slate-900 font-bold px-10 py-5 rounded-xl hover:bg-amber-500 transition-all text-lg shadow-xl w-full sm:w-auto">
+              Get Free Solar Quote
             </Link>
-            <a href="https://wa.me/03125634911" target="_blank" rel="noopener noreferrer" className="border border-zinc-600 text-white font-bold px-8 py-4 rounded-md hover:bg-zinc-800 transition text-lg w-full sm:w-auto flex items-center justify-center gap-2">
-              Chat on WhatsApp
+            <a href="https://wa.me/923125634911?text=Hello%2C%20I%20am%20interested%20in%20solar%20installation.%20I%20would%20like%20to%20discuss%20my%20requirements%20and%20get%20a%20quotation." target="_blank" rel="noopener noreferrer" className="bg-[#25D366] text-white font-bold px-10 py-5 rounded-xl hover:bg-[#20b858] transition-all text-lg shadow-xl w-full sm:w-auto flex items-center justify-center">
+              <svg className="w-6 h-6 mr-3" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
+              WhatsApp Us
             </a>
           </div>
         </div>
       </section>
-
-    
-</div>
+    </main>
   );
 }
