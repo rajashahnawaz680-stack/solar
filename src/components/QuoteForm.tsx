@@ -28,7 +28,7 @@ export default function QuoteForm() {
         await new Promise(resolve => setTimeout(resolve, 1500));
       }
       setIsSuccess(true);
-    } catch (err) {
+    } catch {
       setIsError(true);
     } finally {
       setIsSubmitting(false);
@@ -60,7 +60,7 @@ export default function QuoteForm() {
     <form onSubmit={handleSubmit} className="bg-white p-6 md:p-10 rounded-xl shadow-lg border border-zinc-100 max-w-4xl mx-auto w-full">
       {isError && (
         <div className="bg-red-50 text-red-700 p-6 rounded-md mb-8 flex flex-col items-center text-center">
-          <p className="font-semibold mb-4">We couldn't submit your request right now. Please try again or contact us on WhatsApp.</p>
+          <p className="font-semibold mb-4">We couldn&apos;t submit your request right now. Please try again or contact us on WhatsApp.</p>
           <div className="flex gap-4">
             <button type="button" onClick={() => setIsError(false)} className="bg-red-600 text-white font-bold px-6 py-2 rounded-md hover:bg-red-700 transition">
               Try Again

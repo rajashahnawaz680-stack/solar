@@ -182,7 +182,7 @@ export default function AboutPage() {
         <div className="max-w-3xl mx-auto">
           <h2 className="text-4xl font-bold mb-6">Get Started Today</h2>
           <p className="text-xl text-emerald-100 mb-10">
-            Tell us about your property, electricity usage, and solar requirements. We'll use the information to prepare a quotation based on your requirements.
+            Tell us about your property, electricity usage, and solar requirements. We&apos;ll use the information to prepare a quotation based on your requirements.
           </p>
           <div className="flex flex-col sm:flex-row justify-center gap-4">
             <Link href="/get-quote" className="bg-white text-emerald-800 font-bold px-8 py-4 rounded-md hover:bg-zinc-100 transition shadow-sm">

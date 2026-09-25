@@ -1,6 +1,6 @@
 import type { Metadata } from 'next';
 import Breadcrumbs from '@/components/Breadcrumbs';
-import Link from 'next/link';
+
 
 export const metadata: Metadata = {
   title: "Privacy Policy | Solar Company Islamabad & Rawalpindi",

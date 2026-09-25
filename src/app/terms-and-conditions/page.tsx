@@ -62,7 +62,7 @@ export default function TermsPage() {
         <p>Installation arrangements and timelines are confirmed through the formal quotation/order process.</p>
 
         <h2>11. Equipment & Components</h2>
-        <p>We do not promise or guarantee a particular manufacturer or model unless it is specifically included and itemized in the customer's confirmed quotation.</p>
+        <p>We do not promise or guarantee a particular manufacturer or model unless it is specifically included and itemized in the customer&apos;s confirmed quotation.</p>
 
         <h2>12. Customer Responsibilities</h2>
         <p>To ensure a smooth process, customers are responsible for:</p>

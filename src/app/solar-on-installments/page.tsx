@@ -1,6 +1,6 @@
 import Link from 'next/link';
 import type { Metadata } from 'next';
-import QuoteForm from '@/components/QuoteForm';
+
 import FAQAccordion from '@/components/FAQAccordion';
 import Breadcrumbs from '@/components/Breadcrumbs';
 
