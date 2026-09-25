@@ -12,7 +12,7 @@ export const metadata: Metadata = {
     title: "Solar System Price in Rawalpindi | Quotes & Installments",
     description: "Request current quotes for solar system prices in Rawalpindi. We assess your requirements for 5kW, 10kW, hybrid setups, and offer cash/installment options.",
     url: '/solar-system-price-rawalpindi',
-    siteName: '[Business Name]',
+    siteName: 'Solar KCKY',
     type: 'website',
   },
 };

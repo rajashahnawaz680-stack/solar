@@ -101,9 +101,9 @@ export default function TermsPage() {
         <h2>21. Contact Information</h2>
         <p>If you have questions about these Terms & Conditions, please contact us:</p>
         <ul>
-          <li>Email: [BUSINESS_EMAIL]</li>
-          <li>Phone: [PHONE_NUMBER]</li>
-          <li>WhatsApp: [WHATSAPP_NUMBER]</li>
+          <li>Email: rajashahawaz680@gmail.com</li>
+          <li>Phone: 03125634911</li>
+          <li>WhatsApp: 03125634911</li>
         </ul>
       </section>
     </div>

@@ -16,7 +16,7 @@ export const metadata: Metadata = {
     title: "5kW Solar System | Solar Installation Islamabad & Rawalpindi",
     description: "Explore 5kW solar systems for residential requirements in Islamabad and Rawalpindi. Cash and installment options available.",
     url: '/5kw-solar-system',
-    siteName: '[Business Name]',
+    siteName: 'Solar KCKY',
     type: 'website',
   },
 };
@@ -41,7 +41,7 @@ export default function Page() {
             <Link href="#quote" className="bg-emerald-600 text-white font-bold px-8 py-4 rounded-md hover:bg-emerald-700 transition">
               Get Your Free Solar Quote
             </Link>
-            <a href="https://wa.me/[WHATSAPP_NUMBER]" className="border border-zinc-700 text-white font-bold px-8 py-4 rounded-md hover:bg-zinc-800 transition">
+            <a href="https://wa.me/03125634911" className="border border-zinc-700 text-white font-bold px-8 py-4 rounded-md hover:bg-zinc-800 transition">
               Chat on WhatsApp
             </a>
           </div>
@@ -153,8 +153,8 @@ export default function Page() {
           <Link href="#quote" className="bg-white text-emerald-800 font-bold px-8 py-4 rounded-md hover:bg-zinc-100 transition">
             Get Your Free Solar Quote
           </Link>
-          <a href="tel:[PHONE_NUMBER]" className="border-2 border-emerald-400 text-white font-bold px-8 py-4 rounded-md hover:bg-emerald-600 transition">
-            Call Now: [PHONE_NUMBER]
+          <a href="tel:03125634911" className="border-2 border-emerald-400 text-white font-bold px-8 py-4 rounded-md hover:bg-emerald-600 transition">
+            Call Now: 03125634911
           </a>
         </div>
       </section>

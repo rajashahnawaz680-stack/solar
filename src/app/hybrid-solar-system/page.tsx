@@ -8,15 +8,15 @@ import Breadcrumbs from '@/components/Breadcrumbs';
 import SystemComparison from '@/components/SystemComparison';
 
 export const metadata: Metadata = {
-  title: "Hybrid Solar System Islamabad & Rawalpindi | [Business Name]",
+  title: "Hybrid Solar System Islamabad & Rawalpindi | Solar KCKY",
   description: "Discover hybrid solar systems with battery storage for reliable power in Islamabad and Rawalpindi. Cash and installment options available.",
   keywords: "hybrid solar system Islamabad, hybrid solar system Rawalpindi",
   alternates: { canonical: '/hybrid-solar-system' },
   openGraph: {
-    title: "Hybrid Solar System Islamabad & Rawalpindi | [Business Name]",
+    title: "Hybrid Solar System Islamabad & Rawalpindi | Solar KCKY",
     description: "Discover hybrid solar systems with battery storage for reliable power in Islamabad and Rawalpindi. Cash and installment options available.",
     url: '/hybrid-solar-system',
-    siteName: '[Business Name]',
+    siteName: 'Solar KCKY',
     type: 'website',
   },
 };
@@ -41,7 +41,7 @@ export default function Page() {
             <Link href="#quote" className="bg-emerald-600 text-white font-bold px-8 py-4 rounded-md hover:bg-emerald-700 transition">
               Get Your Free Solar Quote
             </Link>
-            <a href="https://wa.me/[WHATSAPP_NUMBER]" className="border border-zinc-700 text-white font-bold px-8 py-4 rounded-md hover:bg-zinc-800 transition">
+            <a href="https://wa.me/03125634911" className="border border-zinc-700 text-white font-bold px-8 py-4 rounded-md hover:bg-zinc-800 transition">
               Chat on WhatsApp
             </a>
           </div>
@@ -146,8 +146,8 @@ export default function Page() {
           <Link href="#quote" className="bg-white text-emerald-800 font-bold px-8 py-4 rounded-md hover:bg-zinc-100 transition">
             Get Your Free Solar Quote
           </Link>
-          <a href="tel:[PHONE_NUMBER]" className="border-2 border-emerald-400 text-white font-bold px-8 py-4 rounded-md hover:bg-emerald-600 transition">
-            Call Now: [PHONE_NUMBER]
+          <a href="tel:03125634911" className="border-2 border-emerald-400 text-white font-bold px-8 py-4 rounded-md hover:bg-emerald-600 transition">
+            Call Now: 03125634911
           </a>
         </div>
       </section>

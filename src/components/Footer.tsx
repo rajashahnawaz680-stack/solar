@@ -7,7 +7,7 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
           
           <div>
-            <div className="text-2xl font-bold text-white mb-6 tracking-tight">[Business Name]</div>
+            <div className="text-2xl font-bold text-white mb-6 tracking-tight">Solar KCKY</div>
             <p className="text-sm mb-6 leading-relaxed">
               Providing professional solar installation services for residential and commercial customers in Islamabad and Rawalpindi. Cash and installment options available.
             </p>
@@ -49,7 +49,7 @@ export default function Footer() {
         </div>
         
         <div className="mt-16 pt-8 border-t border-zinc-900 text-sm flex flex-col md:flex-row justify-between items-center">
-          <p>&copy; {new Date().getFullYear()} [Business Name]. All rights reserved.</p>
+          <p>&copy; {new Date().getFullYear()} Solar KCKY. All rights reserved.</p>
           <div className="mt-4 md:mt-0 flex gap-4">
              {/* Social links placeholder if needed */}
           </div>

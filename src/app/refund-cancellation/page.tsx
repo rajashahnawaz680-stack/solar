@@ -62,9 +62,9 @@ export default function RefundCancellationPage() {
         </ul>
         <p>Contact Details:</p>
         <ul>
-          <li>Email: [BUSINESS_EMAIL]</li>
-          <li>Phone: [PHONE_NUMBER]</li>
-          <li>WhatsApp: [WHATSAPP_NUMBER]</li>
+          <li>Email: rajashahawaz680@gmail.com</li>
+          <li>Phone: 03125634911</li>
+          <li>WhatsApp: 03125634911</li>
         </ul>
 
         <h2>9. Policy Updates</h2>

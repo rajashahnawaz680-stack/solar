@@ -12,7 +12,7 @@ export const metadata: Metadata = {
     title: "Solar Installation in Islamabad",
     description: "Professional solar installation for homes and businesses in Islamabad. Get a quote today.",
     url: '/solar-installation-islamabad',
-    siteName: '[Business Name]',
+    siteName: 'Solar KCKY',
     type: 'website',
   },
 };
@@ -41,7 +41,7 @@ export default function IslamabadPage() {
             <Link href="#quote-isb" className="bg-emerald-600 text-white font-bold px-8 py-4 rounded-md hover:bg-emerald-700 transition">
               Get Your Free Solar Quote
             </Link>
-            <a href="https://wa.me/[WHATSAPP_NUMBER]" className="border border-zinc-700 text-white font-bold px-8 py-4 rounded-md hover:bg-zinc-800 transition">
+            <a href="https://wa.me/03125634911" className="border border-zinc-700 text-white font-bold px-8 py-4 rounded-md hover:bg-zinc-800 transition">
               Chat on WhatsApp
             </a>
           </div>

@@ -77,9 +77,9 @@ export default function PrivacyPolicyPage() {
         <h2>11. Contact Us</h2>
         <p>If you have any questions or concerns about this privacy policy or our data practices, please contact us:</p>
         <ul>
-          <li>Email: [BUSINESS_EMAIL]</li>
-          <li>Phone: [PHONE_NUMBER]</li>
-          <li>WhatsApp: [WHATSAPP_NUMBER]</li>
+          <li>Email: rajashahawaz680@gmail.com</li>
+          <li>Phone: 03125634911</li>
+          <li>WhatsApp: 03125634911</li>
         </ul>
 
         <div className="bg-zinc-100 p-6 rounded-md mt-12 border-l-4 border-zinc-400 text-base text-zinc-700">

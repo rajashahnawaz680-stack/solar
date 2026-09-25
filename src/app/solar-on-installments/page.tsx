@@ -5,7 +5,7 @@ import FAQAccordion from '@/components/FAQAccordion';
 import Breadcrumbs from '@/components/Breadcrumbs';
 
 export const metadata: Metadata = {
-  title: "Solar on Installments in Islamabad & Rawalpindi | [Business Name]",
+  title: "Solar on Installments in Islamabad & Rawalpindi | Solar KCKY",
   description: "Explore solar installation options with cash or installment payment arrangements in Islamabad and Rawalpindi. Request a free quote today.",
   keywords: "Solar on installments Islamabad, Solar on installments Rawalpindi, Solar system installments Islamabad, Solar panels on installments Islamabad",
   alternates: { canonical: '/solar-on-installments' },
@@ -13,7 +13,7 @@ export const metadata: Metadata = {
     title: "Solar on Installments in Islamabad & Rawalpindi",
     description: "Explore solar installation options with cash or installment payment arrangements.",
     url: '/solar-on-installments',
-    siteName: '[Business Name]',
+    siteName: 'Solar KCKY',
     type: 'website',
   },
 };
@@ -49,7 +49,7 @@ export default function InstallmentsPage() {
             <Link href="/get-quote" className="bg-emerald-600 text-white font-bold px-8 py-4 rounded-md hover:bg-emerald-700 transition">
               Get Your Free Solar Quote
             </Link>
-            <a href="https://wa.me/[WHATSAPP_NUMBER]" className="border border-zinc-600 bg-zinc-800 text-white font-bold px-8 py-4 rounded-md hover:bg-zinc-700 transition flex items-center justify-center gap-2">
+            <a href="https://wa.me/03125634911" className="border border-zinc-600 bg-zinc-800 text-white font-bold px-8 py-4 rounded-md hover:bg-zinc-700 transition flex items-center justify-center gap-2">
               Chat on WhatsApp
             </a>
           </div>
@@ -255,7 +255,7 @@ export default function InstallmentsPage() {
             <Link href="/get-quote" className="bg-emerald-600 text-white font-bold px-8 py-4 rounded-md hover:bg-emerald-700 transition">
               Get Your Free Solar Quote
             </Link>
-            <a href="https://wa.me/[WHATSAPP_NUMBER]" className="border border-zinc-600 bg-zinc-800 text-white font-bold px-8 py-4 rounded-md hover:bg-zinc-700 transition flex items-center justify-center gap-2">
+            <a href="https://wa.me/03125634911" className="border border-zinc-600 bg-zinc-800 text-white font-bold px-8 py-4 rounded-md hover:bg-zinc-700 transition flex items-center justify-center gap-2">
               Chat on WhatsApp
             </a>
           </div>

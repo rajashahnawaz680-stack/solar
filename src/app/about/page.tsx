@@ -11,7 +11,7 @@ export const metadata: Metadata = {
     title: "About Our Solar Installation Services",
     description: "Learn about our solar services in Islamabad & Rawalpindi.",
     url: '/about',
-    siteName: '[Business Name]',
+    siteName: 'Solar KCKY',
     type: 'website',
   },
 };
@@ -34,7 +34,7 @@ export default function AboutPage() {
             <Link href="/get-quote" className="bg-emerald-600 text-white font-bold px-8 py-4 rounded-md hover:bg-emerald-700 transition">
               Get Your Free Solar Quote
             </Link>
-            <a href="https://wa.me/[WHATSAPP_NUMBER]" className="border border-zinc-600 bg-zinc-800 text-white font-bold px-8 py-4 rounded-md hover:bg-zinc-700 transition flex items-center justify-center gap-2">
+            <a href="https://wa.me/03125634911" className="border border-zinc-600 bg-zinc-800 text-white font-bold px-8 py-4 rounded-md hover:bg-zinc-700 transition flex items-center justify-center gap-2">
               Chat on WhatsApp
             </a>
           </div>
@@ -188,10 +188,10 @@ export default function AboutPage() {
             <Link href="/get-quote" className="bg-white text-emerald-800 font-bold px-8 py-4 rounded-md hover:bg-zinc-100 transition shadow-sm">
               Get Free Solar Quote
             </Link>
-            <a href="https://wa.me/[WHATSAPP_NUMBER]" className="border border-emerald-400 bg-emerald-800 text-white font-bold px-8 py-4 rounded-md hover:bg-emerald-900 transition flex items-center justify-center gap-2">
+            <a href="https://wa.me/03125634911" className="border border-emerald-400 bg-emerald-800 text-white font-bold px-8 py-4 rounded-md hover:bg-emerald-900 transition flex items-center justify-center gap-2">
               Chat on WhatsApp
             </a>
-            <a href="tel:[PHONE_NUMBER]" className="border border-emerald-400 text-white font-bold px-8 py-4 rounded-md hover:bg-emerald-600 transition">
+            <a href="tel:03125634911" className="border border-emerald-400 text-white font-bold px-8 py-4 rounded-md hover:bg-emerald-600 transition">
               Call Now
             </a>
           </div>
