@@ -297,7 +297,7 @@ export default function Home() {
         </div>
       </section>
 
-      <ProjectGallery />
+      
 
       {/* 12. TRUST SECTION */}
       <section className="w-full py-16 px-4 sm:px-6 lg:px-8 bg-white border-b border-zinc-100">
@@ -355,7 +355,7 @@ export default function Home() {
         </div>
       </section>
 
-    <ProjectGallery />
+    
 </div>
   );
 }

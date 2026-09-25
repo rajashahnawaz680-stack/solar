@@ -3,79 +3,86 @@ import { useState, useEffect } from 'react';
 import Link from 'next/link';
 
 export default function ProjectGallery() {
-  const [selectedImage, setSelectedImage] = useState<number | null>(null);
+  const [selectedProject, setSelectedProject] = useState<number | null>(null);
 
-  // Esc key to close
   useEffect(() => {
     const handleKeyDown = (e: KeyboardEvent) => {
-      if (e.key === 'Escape') {
-        setSelectedImage(null);
-      }
+      if (e.key === 'Escape') setSelectedProject(null);
     };
-    if (selectedImage !== null) {
+    if (selectedProject !== null) {
       window.addEventListener('keydown', handleKeyDown);
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = 'unset';
     }
-    return () => window.removeEventListener('keydown', handleKeyDown);
-  }, [selectedImage]);
+    return () => {
+      window.removeEventListener('keydown', handleKeyDown);
+      document.body.style.overflow = 'unset';
+    };
+  }, [selectedProject]);
 
   const projects = [
     {
       id: 0,
       title: "Residential Solar Installation",
       desc: "Professional rooftop solar solutions designed for residential energy requirements.",
-      src: "https://images.unsplash.com/photo-1509391366360-51590d6350f5?auto=format&fit=crop&w=800&q=80",
+      overview: "This solution involves a complete evaluation of household energy consumption and the deployment of a highly efficient rooftop solar array to offset grid dependency.",
+      features: ["Custom rooftop mounting", "Residential inverter integration", "Optimized panel layout"],
+      suitableFor: "Ideal for homeowners looking to reduce monthly electricity bills and secure energy independence.",
+      src: "https://images.unsplash.com/photo-1509391366360-51590d6350f5?auto=format&fit=crop&w=1200&q=80",
       alt: "Residential rooftop solar panel installation"
     },
     {
       id: 1,
       title: "Commercial Solar Installation",
       desc: "Solar installation solutions designed for commercial and business properties.",
-      src: "https://images.unsplash.com/photo-1508514177221-188b1c77eca2?auto=format&fit=crop&w=800&q=80",
-      alt: "Commercial building solar panels"
+      overview: "A scalable, high-capacity solar infrastructure tailored for businesses. Focuses on maximum yield to offset heavy daytime commercial power loads.",
+      features: ["High-capacity commercial panels", "Heavy-duty racking systems", "Commercial grid-tie inverters"],
+      suitableFor: "Suitable for factories, offices, and large commercial spaces aiming for ESG goals and operational cost reduction.",
+      src: "https://images.unsplash.com/photo-1508514177221-188b1c77eca2?auto=format&fit=crop&w=1200&q=80",
+      alt: "Commercial rooftop solar installation"
     },
     {
       id: 2,
       title: "Rooftop Solar Installation",
       desc: "Clean and professional solar panel installation for suitable rooftop spaces.",
-      src: "https://images.unsplash.com/photo-1497440001374-f26997328c1b?auto=format&fit=crop&w=800&q=80",
-      alt: "Technicians installing solar panels on rooftop"
+      overview: "Standardized rooftop installation utilizing available space efficiently. Engineered to maintain roof integrity while maximizing sun exposure.",
+      features: ["Leak-proof mounting hardware", "Clean cable management", "Weather-resistant components"],
+      suitableFor: "Perfect for any property with unobstructed south-facing or flat roof space.",
+      src: "https://images.unsplash.com/photo-1497440001374-f26997328c1b?auto=format&fit=crop&w=1200&q=80",
+      alt: "Professional rooftop solar panels"
     },
     {
       id: 3,
       title: "Solar Equipment Setup",
       desc: "Professional placement and setup of solar equipment and supporting components.",
-      src: "https://images.unsplash.com/photo-1613665813446-82a78c468a1d?auto=format&fit=crop&w=800&q=80",
-      alt: "Professional solar equipment and inverter setup"
+      overview: "Precision installation of critical solar infrastructure, including inverters, safety disconnects, and distribution panels.",
+      features: ["Professional wiring", "Safety switch integration", "Space-optimized layout"],
+      suitableFor: "Crucial for all solar setups requiring reliable power conversion and safe electrical routing.",
+      src: "https://images.unsplash.com/photo-1613665813446-82a78c468a1d?auto=format&fit=crop&w=1200&q=80",
+      alt: "Solar inverter and equipment installation"
     },
     {
       id: 4,
       title: "Hybrid Solar System",
       desc: "Hybrid solar solutions combining solar generation with backup capability.",
-      src: "https://images.unsplash.com/photo-1592833159155-c62df1b65634?auto=format&fit=crop&w=800&q=80",
-      alt: "Hybrid solar panel installation on a clear day"
+      overview: "An advanced system that generates solar power and stores excess energy in a battery bank, ensuring power availability during grid outages.",
+      features: ["Battery storage integration", "Smart hybrid inverter", "Automatic failover protection"],
+      suitableFor: "Highly recommended for areas experiencing frequent power load-shedding or blackouts.",
+      src: "https://images.unsplash.com/photo-1592833159155-c62df1b65634?auto=format&fit=crop&w=1200&q=80",
+      alt: "Hybrid solar system installation"
     },
     {
       id: 5,
       title: "On-Grid Solar System",
       desc: "Solar systems designed for properties connected to the electrical grid.",
-      src: "https://images.unsplash.com/photo-1548614606-52b4451f994b?auto=format&fit=crop&w=800&q=80",
-      alt: "Clean modern on-grid solar installation"
+      overview: "A highly cost-effective setup that synchronizes directly with the national grid. Allows for net-metering where excess generated power is exported.",
+      features: ["Grid synchronization", "Net-metering ready", "No battery maintenance required"],
+      suitableFor: "Best for urban areas with stable grid connections looking for maximum ROI and bill reduction.",
+      src: "https://images.unsplash.com/photo-1548614606-52b4451f994b?auto=format&fit=crop&w=1200&q=80",
+      alt: "On-grid solar panel installation"
     }
   ];
-
-  const handleNext = (e: React.MouseEvent) => {
-    e.stopPropagation();
-    if (selectedImage !== null) {
-      setSelectedImage((selectedImage + 1) % projects.length);
-    }
-  };
-
-  const handlePrev = (e: React.MouseEvent) => {
-    e.stopPropagation();
-    if (selectedImage !== null) {
-      setSelectedImage((selectedImage - 1 + projects.length) % projects.length);
-    }
-  };
 
   return (
     <section className="py-24 bg-zinc-50 relative">
@@ -85,7 +92,7 @@ export default function ProjectGallery() {
         <div className="text-center max-w-3xl mx-auto mb-16">
           <h2 className="text-4xl md:text-5xl font-extrabold text-zinc-900 mb-6 tracking-tight">Our Solar Projects</h2>
           <p className="text-xl text-zinc-600">
-            Explore examples of professional solar installations for residential and commercial properties.
+            Explore solar installation solutions for residential and commercial properties.
           </p>
         </div>
 
@@ -95,10 +102,9 @@ export default function ProjectGallery() {
             <div 
               key={project.id} 
               className="group bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 cursor-pointer border border-zinc-200 flex flex-col transform hover:-translate-y-1"
-              onClick={() => setSelectedImage(project.id)}
+              onClick={() => setSelectedProject(project.id)}
             >
               <div className="relative aspect-[16/10] w-full overflow-hidden bg-zinc-200">
-                {/* Using standard img tag to bypass next/image domain restrictions ensuring images ALWAYS load */}
                 <img 
                   src={project.src} 
                   alt={project.alt}
@@ -108,7 +114,7 @@ export default function ProjectGallery() {
                 <div className="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
                   <span className="bg-white/95 text-zinc-900 font-bold px-6 py-2 rounded-full shadow-lg text-sm flex items-center">
                     <svg className="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" /><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" /></svg>
-                    View Project
+                    View Details
                   </span>
                 </div>
               </div>
@@ -136,50 +142,89 @@ export default function ProjectGallery() {
         </div>
       </div>
 
-      {/* Lightbox Modal */}
-      {selectedImage !== null && (
+      {/* Detailed Project Modal */}
+      {selectedProject !== null && (
         <div 
-          className="fixed inset-0 z-[100] bg-zinc-950/98 flex items-center justify-center p-4 backdrop-blur-md" 
-          onClick={() => setSelectedImage(null)}
+          className="fixed inset-0 z-[100] bg-zinc-950/98 flex items-center justify-center p-4 md:p-8 backdrop-blur-md overflow-y-auto" 
+          onClick={() => setSelectedProject(null)}
         >
-          <button 
-            className="absolute top-4 right-4 md:top-8 md:right-8 text-white bg-zinc-800/50 hover:bg-emerald-600 p-3 rounded-full transition z-[110]"
-            onClick={(e) => { e.stopPropagation(); setSelectedImage(null); }}
-            aria-label="Close lightbox"
+          <div 
+            className="relative w-full max-w-6xl bg-white rounded-2xl overflow-hidden shadow-2xl my-auto flex flex-col md:flex-row" 
+            onClick={(e) => e.stopPropagation()}
           >
-            <svg className="w-6 h-6 md:w-8 md:h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M6 18L18 6M6 6l12 12" /></svg>
-          </button>
+            <button 
+              className="absolute top-4 right-4 text-zinc-400 hover:text-zinc-900 bg-white/80 hover:bg-zinc-100 p-2 rounded-full transition z-10 shadow-sm"
+              onClick={() => setSelectedProject(null)}
+              aria-label="Close modal"
+            >
+              <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M6 18L18 6M6 6l12 12" /></svg>
+            </button>
 
-          <button 
-            className="absolute left-2 md:left-8 text-white bg-zinc-800/50 hover:bg-emerald-600 p-3 md:p-4 rounded-full transition z-[110]"
-            onClick={handlePrev}
-            aria-label="Previous image"
-          >
-            <svg className="w-6 h-6 md:w-8 md:h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M15 19l-7-7 7-7" /></svg>
-          </button>
+            {/* Modal Image Side */}
+            <div className="w-full md:w-1/2 relative min-h-[300px] md:min-h-full bg-zinc-100">
+               <img 
+                 src={projects[selectedProject].src} 
+                 alt={projects[selectedProject].alt}
+                 className="absolute inset-0 w-full h-full object-cover"
+               />
+               {/* Controls if we wanted gallery navigation inside the modal */}
+               <button 
+                 className="absolute left-4 top-1/2 -translate-y-1/2 text-white bg-zinc-900/50 hover:bg-emerald-600 p-2 rounded-full transition"
+                 onClick={(e) => { e.stopPropagation(); setSelectedProject((selectedProject - 1 + projects.length) % projects.length); }}
+                 aria-label="Previous"
+               >
+                 <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M15 19l-7-7 7-7" /></svg>
+               </button>
+               <button 
+                 className="absolute right-4 top-1/2 -translate-y-1/2 text-white bg-zinc-900/50 hover:bg-emerald-600 p-2 rounded-full transition"
+                 onClick={(e) => { e.stopPropagation(); setSelectedProject((selectedProject + 1) % projects.length); }}
+                 aria-label="Next"
+               >
+                 <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 5l7 7-7 7" /></svg>
+               </button>
+            </div>
 
-          <div className="relative w-full max-w-6xl h-[60vh] md:h-[80vh] mx-12 md:mx-24 flex flex-col items-center justify-center" onClick={(e) => e.stopPropagation()}>
-             <div className="relative w-full h-full flex items-center justify-center">
-                {/* Standard img tag for lightbox as well */}
-                <img 
-                  src={projects[selectedImage].src} 
-                  alt={projects[selectedImage].alt}
-                  className="object-contain max-w-full max-h-full rounded-lg shadow-2xl"
-                />
-             </div>
-             <div className="absolute bottom-[-70px] md:bottom-[-90px] w-full text-center">
-                <h3 className="text-white text-xl md:text-3xl font-bold mb-2">{projects[selectedImage].title}</h3>
-                <p className="text-zinc-300 text-sm md:text-lg">{projects[selectedImage].desc}</p>
-             </div>
+            {/* Modal Content Side */}
+            <div className="w-full md:w-1/2 p-8 md:p-12 overflow-y-auto max-h-[80vh] flex flex-col">
+               <span className="text-emerald-600 font-bold text-sm tracking-widest uppercase mb-2">Project Details</span>
+               <h3 className="text-3xl md:text-4xl font-extrabold text-zinc-900 mb-6">{projects[selectedProject].title}</h3>
+               
+               <div className="mb-8">
+                 <h4 className="text-xl font-bold text-zinc-900 mb-3">Project Overview</h4>
+                 <p className="text-zinc-600 leading-relaxed">{projects[selectedProject].overview}</p>
+               </div>
+
+               <div className="mb-8">
+                 <h4 className="text-xl font-bold text-zinc-900 mb-3">Key Features</h4>
+                 <ul className="space-y-2">
+                   {projects[selectedProject].features.map((feature, idx) => (
+                     <li key={idx} className="flex items-start">
+                       <svg className="w-5 h-5 text-emerald-500 mr-3 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7" /></svg>
+                       <span className="text-zinc-600">{feature}</span>
+                     </li>
+                   ))}
+                 </ul>
+               </div>
+
+               <div className="mb-10 bg-zinc-50 p-6 rounded-xl border border-zinc-100">
+                 <h4 className="text-lg font-bold text-zinc-900 mb-2">Why This Solar Solution?</h4>
+                 <p className="text-zinc-600">{projects[selectedProject].suitableFor}</p>
+               </div>
+
+               <div className="mt-auto border-t border-zinc-200 pt-8">
+                 <h4 className="text-lg font-bold text-zinc-900 mb-4">Request Your Solar Quote</h4>
+                 <div className="flex flex-col sm:flex-row gap-4">
+                   <Link href="/get-quote" onClick={() => setSelectedProject(null)} className="flex-1 bg-zinc-900 text-white font-bold py-4 px-6 rounded-md hover:bg-zinc-800 transition text-center shadow-sm">
+                     Request a Quote
+                   </Link>
+                   <a href="https://wa.me/923125634911?text=Hello%2C%20I%20am%20interested%20in%20solar%20installation.%20I%20would%20like%20to%20discuss%20my%20requirements%20and%20get%20a%20quotation." target="_blank" rel="noopener noreferrer" className="flex-1 bg-[#25D366] text-white font-bold py-4 px-6 rounded-md hover:bg-[#20b858] transition text-center shadow-sm flex items-center justify-center">
+                     WhatsApp Us
+                   </a>
+                 </div>
+               </div>
+            </div>
+
           </div>
-
-          <button 
-            className="absolute right-2 md:right-8 text-white bg-zinc-800/50 hover:bg-emerald-600 p-3 md:p-4 rounded-full transition z-[110]"
-            onClick={handleNext}
-            aria-label="Next image"
-          >
-            <svg className="w-6 h-6 md:w-8 md:h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 5l7 7-7 7" /></svg>
-          </button>
         </div>
       )}
     </section>
