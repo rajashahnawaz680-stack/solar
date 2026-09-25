@@ -299,6 +299,8 @@ export default function Home() {
 
       
 
+      <ProjectGallery />
+
       {/* 12. TRUST SECTION */}
       <section className="w-full py-16 px-4 sm:px-6 lg:px-8 bg-white border-b border-zinc-100">
         <div className="max-w-7xl mx-auto">
