@@ -23,7 +23,7 @@ export default function ProjectGallery() {
     {
       id: 0,
       title: "Residential Solar Installation",
-      desc: "Professional rooftop solar installation designed for residential energy needs.",
+      desc: "Professional rooftop solar installation for residential energy requirements.",
       src: "https://images.unsplash.com/photo-1509391366360-51590d6350f5?auto=format&fit=crop&w=800&q=80",
       alt: "Residential rooftop solar panel installation"
     },
@@ -37,30 +37,9 @@ export default function ProjectGallery() {
     {
       id: 2,
       title: "Rooftop Solar Installation",
-      desc: "Clean rooftop solar panel installation with professional equipment placement.",
+      desc: "Professional rooftop solar panel installation and equipment setup.",
       src: "https://images.unsplash.com/photo-1497440001374-f26997328c1b?auto=format&fit=crop&w=800&q=80",
       alt: "Technicians installing solar panels on rooftop"
-    },
-    {
-      id: 3,
-      title: "Solar Equipment Setup",
-      desc: "Professional placement of solar panels and associated inverter equipment.",
-      src: "https://images.unsplash.com/photo-1613665813446-82a78c468a1d?auto=format&fit=crop&w=800&q=80",
-      alt: "Professional solar equipment and inverter setup"
-    },
-    {
-      id: 4,
-      title: "Hybrid Solar System",
-      desc: "Hybrid solar installation combining grid access with battery backup capabilities.",
-      src: "https://images.unsplash.com/photo-1592833159155-c62df1b65634?auto=format&fit=crop&w=800&q=80",
-      alt: "Hybrid solar panel installation on a clear day"
-    },
-    {
-      id: 5,
-      title: "On-Grid Solar System",
-      desc: "Modern on-grid solar installation connected securely to electrical infrastructure.",
-      src: "https://images.unsplash.com/photo-1548614606-52b4451f994b?auto=format&fit=crop&w=800&q=80",
-      alt: "Clean modern on-grid solar installation"
     }
   ];
 
