@@ -1,13 +1,26 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
+import Header from "@/components/Header";
+import Footer from "@/components/Footer";
 
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "[Business Name] | Premium Solar Installation in Islamabad & Rawalpindi",
-  description: "Get professional solar installation services and solar systems on installments in Islamabad and Rawalpindi.",
+  description: "Get professional solar installation services and solar systems on installments in Islamabad and Rawalpindi. Cash and installment plans available.",
   keywords: "Solar Installation Islamabad, Solar Installation Rawalpindi, Solar Systems on Installments, 5kW Solar, 10kW Solar",
+  alternates: {
+    canonical: '/',
+  },
+  openGraph: {
+    title: "[Business Name] | Premium Solar Installation",
+    description: "Expert solar installation in Islamabad & Rawalpindi with flexible installment plans.",
+    url: '/',
+    siteName: '[Business Name]',
+    locale: 'en_PK',
+    type: 'website',
+  },
 };
 
 export default function RootLayout({
@@ -16,29 +29,13 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body className={`${inter.className} min-h-screen flex flex-col bg-white text-zinc-900`}>
-        {/* Foundation Header Placeholder */}
-        <header className="w-full bg-white border-b py-4 px-6 md:px-12 flex justify-between items-center shadow-sm">
-          <div className="font-bold text-xl text-green-600">[Business Name]</div>
-          <nav className="hidden md:flex gap-6 font-medium text-sm">
-            <a href="/" className="hover:text-green-600 transition">Home</a>
-            <a href="/solar-installation-islamabad" className="hover:text-green-600 transition">Islamabad</a>
-            <a href="/solar-installation-rawalpindi" className="hover:text-green-600 transition">Rawalpindi</a>
-            <a href="/solar-on-installments" className="hover:text-green-600 transition">Installments</a>
-            <a href="/get-free-quote" className="bg-green-600 text-white px-4 py-2 rounded-md hover:bg-green-700 transition">Get a Quote</a>
-          </nav>
-        </header>
-
-        {/* Main Content */}
-        <main className="flex-grow flex flex-col">
+    <html lang="en" className="scroll-smooth">
+      <body className={`${inter.className} min-h-screen flex flex-col bg-white text-zinc-900 selection:bg-emerald-100 selection:text-emerald-900`}>
+        <Header />
+        <main className="flex-grow flex flex-col w-full">
           {children}
         </main>
-
-        {/* Foundation Footer Placeholder */}
-        <footer className="w-full bg-zinc-900 text-zinc-400 py-8 px-6 md:px-12 text-sm text-center">
-          <p>&copy; {new Date().getFullYear()} [Business Name]. Serving Islamabad and Rawalpindi.</p>
-        </footer>
+        <Footer />
       </body>
     </html>
   );
