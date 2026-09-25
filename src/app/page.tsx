@@ -88,59 +88,10 @@ export default function Home() {
       {/* 2. SOLAR POTENTIAL CALCULATOR */}
       <Calculator />
 
-      {/* 3. WHY SOLAR */}
-      <section className="py-24 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-            <div className="relative aspect-[4/3] rounded-2xl overflow-hidden shadow-2xl">
-              <img src="https://images.unsplash.com/photo-1509391366360-51590d6350f5?auto=format&fit=crop&w=1200&q=80" alt="Solar Home" loading="lazy" className="object-cover w-full h-full" />
-            </div>
-            <div>
-              <h2 className="text-3xl md:text-5xl font-extrabold text-slate-900 mb-8 tracking-tight">Why More Homeowners Are Switching to Solar</h2>
-              <div className="space-y-8">
-                <div className="flex items-start">
-                  <div className="flex-shrink-0 w-12 h-12 bg-amber-400/10 rounded-full flex items-center justify-center border border-amber-400/20 mr-4">
-                    <svg className="w-6 h-6 text-amber-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M13 10V3L4 14h7v7l9-11h-7z" /></svg>
-                  </div>
-                  <div>
-                    <h3 className="text-xl font-bold text-slate-900 mb-2">Reduce Grid Dependence</h3>
-                    <p className="text-slate-600">Lower your monthly electricity bills and protect yourself from rising grid energy costs.</p>
-                  </div>
-                </div>
-                <div className="flex items-start">
-                  <div className="flex-shrink-0 w-12 h-12 bg-amber-400/10 rounded-full flex items-center justify-center border border-amber-400/20 mr-4">
-                    <svg className="w-6 h-6 text-amber-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9" /></svg>
-                  </div>
-                  <div>
-                    <h3 className="text-xl font-bold text-slate-900 mb-2">Clean Energy</h3>
-                    <p className="text-slate-600">Reduce your carbon footprint by generating your own clean, renewable energy directly from the sun.</p>
-                  </div>
-                </div>
-                <div className="flex items-start">
-                  <div className="flex-shrink-0 w-12 h-12 bg-amber-400/10 rounded-full flex items-center justify-center border border-amber-400/20 mr-4">
-                    <svg className="w-6 h-6 text-amber-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 6V4m0 2a2 2 0 100 4m0-4a2 2 0 110 4m-6 8a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4m6 6v10m6-2a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4" /></svg>
-                  </div>
-                  <div>
-                    <h3 className="text-xl font-bold text-slate-900 mb-2">Flexible System Options</h3>
-                    <p className="text-slate-600">From pure grid-tie systems to full hybrid battery backups, tailor your system to your lifestyle.</p>
-                  </div>
-                </div>
-                <div className="flex items-start">
-                  <div className="flex-shrink-0 w-12 h-12 bg-amber-400/10 rounded-full flex items-center justify-center border border-amber-400/20 mr-4">
-                    <svg className="w-6 h-6 text-amber-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" /></svg>
-                  </div>
-                  <div>
-                    <h3 className="text-xl font-bold text-slate-900 mb-2">Residential & Commercial Solutions</h3>
-                    <p className="text-slate-600">Scalable technology that powers everything from small homes to large industrial facilities.</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
+      {/* 3. WHY SOLAR KCKY */}
+      <WhySolarKcky />
 
-            {/* NEW: SOLAR SOLUTIONS SHOWCASE */}
+      {/* NEW: SOLAR SOLUTIONS SHOWCASE */}
       <section className="py-24 bg-slate-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
