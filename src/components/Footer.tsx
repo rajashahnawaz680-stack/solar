@@ -10,7 +10,7 @@ export default function Footer() {
           <div className="lg:col-span-1">
             <Link href="/" className="text-2xl font-extrabold text-white tracking-tight flex items-center mb-6">
                <svg className="w-8 h-8 text-[#9dbf2c] mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M13 10V3L4 14h7v7l9-11h-7z" /></svg>
-               SUNORA ENERGY
+               Solar Panel
             </Link>
             <p className="text-sm text-slate-400 leading-relaxed mb-6">
               Premium solar engineering and installation services for residential and commercial properties across Islamabad and Rawalpindi.
@@ -75,7 +75,7 @@ export default function Footer() {
 
         {/* Bottom Bar */}
         <div className="pt-8 border-t border-[#183C32] flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-slate-500">
-          <p>&copy; {new Date().getFullYear()} SUNORA ENERGY. All rights reserved.</p>
+          <p>&copy; {new Date().getFullYear()} Solar Panel. All rights reserved.</p>
           <div className="flex gap-6">
              <Link href="/privacy-policy" className="hover:text-white transition-colors">Privacy Policy</Link>
              <Link href="/terms-and-conditions" className="hover:text-white transition-colors">Terms of Service</Link>

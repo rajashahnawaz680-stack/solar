@@ -8,17 +8,17 @@ import Footer from "@/components/Footer";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "SUNORA ENERGY | Premium Solar Installation in Islamabad & Rawalpindi",
+  title: "Solar Panel | Premium Solar Installation in Islamabad & Rawalpindi",
   description: "Get professional solar installation services and solar systems on installments in Islamabad and Rawalpindi. Cash and installment plans available.",
   keywords: "Solar Installation Islamabad, Solar Installation Rawalpindi, Solar Systems on Installments, 5kW Solar, 10kW Solar",
   alternates: {
     canonical: '/',
   },
   openGraph: {
-    title: "SUNORA ENERGY | Premium Solar Installation",
+    title: "Solar Panel | Premium Solar Installation",
     description: "Expert solar installation in Islamabad & Rawalpindi with flexible installment plans.",
     url: '/',
-    siteName: 'SUNORA ENERGY',
+    siteName: 'Solar Panel',
     locale: 'en_PK',
     type: 'website',
   },
