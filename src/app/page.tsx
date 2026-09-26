@@ -203,7 +203,7 @@ export default function HomePage() {
         <div className="max-w-7xl mx-auto px-4">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
             <div className="rounded-3xl overflow-hidden shadow-2xl">
-              <img src="https://images.unsplash.com/photo-1509391366360-51590d6350f5?auto=format&fit=crop&w=800&q=80" alt="Solar installation" className="w-full h-96 object-cover" />
+              <img src="https://images.unsplash.com/photo-1588556008892-db52a36b30f8?auto=format&fit=crop&w=800&q=80" alt="Solar installation" className="w-full h-96 object-cover" />
             </div>
             <div>
               <span className="inline-block bg-[#183C32] text-[#B8D83D] text-xs font-bold px-4 py-1.5 rounded-full tracking-widest uppercase mb-6">Installation</span>
