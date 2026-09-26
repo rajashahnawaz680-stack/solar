@@ -1,71 +1,49 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'Frequently Asked Questions | SUNORA ENERGY',
-  description: 'Comprehensive answers regarding solar system sizing, installation, on-grid vs hybrid, pricing, and maintenance in Islamabad and Rawalpindi.'
+  title: 'Solar FAQ — Solar Panel Rawalpindi & Islamabad',
+  description: 'Answers to common solar questions about residential, commercial, battery, net metering and payment options.',
 };
 
+const faqs = [
+  { q: 'How do I know what solar system I need?', a: 'System size is determined by analyzing your monthly electricity bill, available roof space, and backup goals. We discuss this during our consultation.' },
+  { q: 'Can I pay in cash?', a: 'Yes. We provide direct cash purchase options based on a finalized custom quotation prepared specifically for your property.' },
+  { q: 'Can I pay through installments?', a: 'Yes. We offer flexible installment options. Contact us to discuss eligibility and available payment plans.' },
+  { q: 'Do I need battery backup?', a: 'Battery backup is optional but recommended if you experience frequent load shedding or need continued power during outages.' },
+  { q: 'Can solar help during load shedding?', a: 'Yes. A hybrid solar system with battery backup can keep critical appliances running when the grid is down.' },
+  { q: 'What information is needed for a quotation?', a: 'Your average monthly electricity bill, property location, property type, and backup requirements. Share this through our solar plan form.' },
+  { q: 'Do you provide residential solutions?', a: 'Yes. We specialize in rooftop solar systems for homes, villas and residential properties.' },
+  { q: 'Do you provide commercial solutions?', a: 'Yes. We design solar systems for offices, shops, factories and commercial buildings.' },
+  { q: 'Do you serve Rawalpindi and Islamabad?', a: 'Yes. Rawalpindi and Islamabad are our primary service areas.' },
+  { q: 'How do I contact you?', a: 'Call or WhatsApp us at 03125634911, or email rajashahnawaz680@gmail.com. You can also submit requirements through our solar plan form.' },
+];
+
 export default function FAQPage() {
-  const faqs = [
-    {
-      category: "System Sizing & Types",
-      questions: [
-        { q: "What is the difference between On-Grid and Hybrid?", a: "On-grid systems are connected directly to the utility grid and do not use batteries; they are highly cost-effective but turn off during load shedding. Hybrid systems include battery storage, allowing you to have power during outages." },
-        { q: "How do I know if I need a 5kW or 10kW system?", a: "A 5kW system is typically sufficient for standard homes running basic appliances and maybe 1-2 ACs. A 10kW system is ideal for larger homes or small offices running multiple ACs and heavy loads. Our calculator provides a quick estimate based on your bill." }
-      ]
-    },
-    {
-      category: "Installation & Service",
-      questions: [
-        { q: "Where do you provide installation services?", a: "We primarily serve Islamabad and Rawalpindi, covering major areas like DHA, Bahria Town, and all central sectors." },
-        { q: "How long does installation take?", a: "Once the site assessment and design are finalized, the physical installation of standard residential systems typically takes 2-4 days depending on the property layout." }
-      ]
-    },
-    {
-      category: "Pricing & Payments",
-      questions: [
-        { q: "Do you offer installment plans?", a: "Yes, we support both upfront cash payments and installment options where supported. Please indicate your preference in the quote form to discuss available plans." },
-        { q: "Are there hidden costs?", a: "No. Our proposals outline all costs upfront including equipment, mounting hardware, wiring, and installation labor." }
-      ]
-    }
-  ];
-
   return (
-    <main className="min-h-screen bg-slate-50 pt-28 pb-24">
-      <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-16">
-          <h1 className="text-4xl md:text-5xl font-extrabold text-[#0B0F0E] mb-6 tracking-tight">Frequently Asked Questions</h1>
-          <p className="text-xl text-slate-600">Everything you need to know about transitioning to solar.</p>
-        </div>
-
-        <div className="space-y-16">
-          {faqs.map((group, i) => (
-            <div key={i}>
-               <h2 className="text-2xl font-bold text-[#0B0F0E] mb-6 border-b border-slate-200 pb-3">{group.category}</h2>
-               <div className="space-y-4">
-                 {group.questions.map((faq, j) => (
-                   <details key={j} className="bg-white rounded-2xl p-6 shadow-sm border border-slate-100 cursor-pointer group">
-                     <summary className="font-bold text-lg text-[#0B0F0E] flex justify-between items-center outline-none">
-                       {faq.q}
-                       <svg className="w-5 h-5 text-[#9dbf2c] transform group-open:rotate-180 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7" /></svg>
-                     </summary>
-                     <p className="mt-4 text-slate-600 leading-relaxed">{faq.a}</p>
-                   </details>
-                 ))}
-               </div>
-            </div>
+    <main className="min-h-screen bg-[#F5F6F1]">
+      <div className="bg-[#0B0F0E] pt-32 pb-20 px-4 text-center">
+        <h1 className="text-4xl md:text-5xl font-extrabold text-white mb-4">Frequently Asked Questions</h1>
+        <p className="text-gray-400 text-lg max-w-xl mx-auto">Clear answers to common solar questions.</p>
+      </div>
+      <div className="max-w-3xl mx-auto px-4 py-16">
+        <div className="space-y-3">
+          {faqs.map((faq, i) => (
+            <details key={i} className="group bg-white rounded-2xl shadow-sm border border-gray-100 cursor-pointer overflow-hidden">
+              <summary className="flex items-center justify-between p-6 font-bold text-[#0B0F0E] list-none select-none">
+                <span>{faq.q}</span>
+                <svg className="w-5 h-5 text-[#B8D83D] shrink-0 ml-4 group-open:rotate-180 transition-transform duration-200" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7"/></svg>
+              </summary>
+              <div className="px-6 pb-6 text-gray-600 leading-relaxed border-t border-gray-50 pt-4">{faq.a}</div>
+            </details>
           ))}
         </div>
-
-        <div className="mt-16 text-center bg-[#0B0F0E] rounded-3xl p-10 text-white shadow-xl">
-           <h3 className="text-2xl font-bold mb-4">Still have questions?</h3>
-           <p className="text-slate-300 mb-8">Our solar experts are ready to discuss your specific requirements.</p>
-           <div className="flex flex-col sm:flex-row justify-center gap-4">
-             <Link href="/get-quote" className="bg-[#B8D83D] text-[#0B0F0E] font-bold px-8 py-3 rounded-xl hover:bg-[#9dbf2c] transition-colors">Request a Quote</Link>
-             <a href="https://wa.me/923125634911" target="_blank" rel="noopener noreferrer" className="bg-[#25D366] text-white font-bold px-8 py-3 rounded-xl hover:bg-[#20b858] transition-colors flex items-center justify-center">
-               WhatsApp Us
-             </a>
-           </div>
+        <div className="mt-16 bg-[#0B0F0E] rounded-3xl p-10 text-center">
+          <h2 className="text-2xl font-extrabold text-white mb-3">Still have questions?</h2>
+          <p className="text-gray-400 mb-8">Talk to us directly.</p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <Link href="/get-quote" className="bg-[#B8D83D] text-[#0B0F0E] font-bold px-8 py-4 rounded-xl hover:bg-[#9dbf2c] transition-colors">Build My Solar Plan</Link>
+            <a href="https://wa.me/923125634911" target="_blank" rel="noopener noreferrer" className="bg-[#25D366] text-white font-bold px-8 py-4 rounded-xl hover:bg-[#20b858] transition-colors">WhatsApp Us</a>
+          </div>
         </div>
       </div>
     </main>
