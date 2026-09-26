@@ -18,11 +18,11 @@ export default function ProjectDetail({ params }: { params: { id: string } }) {
   return (
     <main className="min-h-screen bg-white pt-24">
       {/* Project Hero Image */}
-      <div className="w-full h-[50vh] md:h-[60vh] relative bg-slate-900">
+      <div className="w-full h-[50vh] md:h-[60vh] relative bg-[#0B0F0E]">
          <img src={project.src} alt={project.alt} className="w-full h-full object-cover opacity-80" />
          <div className="absolute inset-0 bg-gradient-to-t from-slate-900 via-slate-900/30 to-transparent"></div>
          <div className="absolute bottom-0 left-0 right-0 p-8 md:p-16 max-w-7xl mx-auto w-full">
-            <div className="inline-block bg-amber-400 text-slate-900 font-bold px-4 py-1.5 rounded-full text-sm mb-4">
+            <div className="inline-block bg-[#B8D83D] text-[#0B0F0E] font-bold px-4 py-1.5 rounded-full text-sm mb-4">
               {project.category}
             </div>
             <h1 className="text-4xl md:text-6xl font-extrabold text-white tracking-tight drop-shadow-md">
@@ -37,21 +37,21 @@ export default function ProjectDetail({ params }: { params: { id: string } }) {
           {/* Main Content */}
           <div className="lg:col-span-2 space-y-12">
             <section>
-               <h2 className="text-2xl font-bold text-slate-900 mb-4 border-b border-slate-100 pb-2">Project Overview</h2>
+               <h2 className="text-2xl font-bold text-[#0B0F0E] mb-4 border-b border-slate-100 pb-2">Project Overview</h2>
                <p className="text-slate-600 text-lg leading-relaxed">{project.overview}</p>
             </section>
             
             <section>
-               <h2 className="text-2xl font-bold text-slate-900 mb-4 border-b border-slate-100 pb-2">Installation Details</h2>
+               <h2 className="text-2xl font-bold text-[#0B0F0E] mb-4 border-b border-slate-100 pb-2">Installation Details</h2>
                <p className="text-slate-600 text-lg leading-relaxed mb-6">
                  This project demonstrates a meticulous approach to solar integration, prioritizing both energy efficiency and aesthetic integrity. Standardized procedures ensure optimal tilt, secure mounting, and clean cable management, adhering strictly to safety and performance standards.
                </p>
                <div className="bg-slate-50 p-6 rounded-2xl border border-slate-100">
-                  <h3 className="text-lg font-bold text-slate-900 mb-3">Key Features</h3>
+                  <h3 className="text-lg font-bold text-[#0B0F0E] mb-3">Key Features</h3>
                   <ul className="space-y-3">
                     {project.features.map((feat, i) => (
                       <li key={i} className="flex items-start">
-                         <svg className="w-5 h-5 text-amber-500 mr-3 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7" /></svg>
+                         <svg className="w-5 h-5 text-[#9dbf2c] mr-3 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7" /></svg>
                          <span className="text-slate-700">{feat}</span>
                       </li>
                     ))}
@@ -60,31 +60,31 @@ export default function ProjectDetail({ params }: { params: { id: string } }) {
             </section>
             
             <section>
-               <h2 className="text-2xl font-bold text-slate-900 mb-4 border-b border-slate-100 pb-2">Project Summary</h2>
+               <h2 className="text-2xl font-bold text-[#0B0F0E] mb-4 border-b border-slate-100 pb-2">Project Summary</h2>
                <p className="text-slate-600 text-lg leading-relaxed">{project.suitableFor}</p>
             </section>
           </div>
 
           {/* Sidebar */}
           <div className="lg:col-span-1">
-             <div className="bg-slate-900 rounded-3xl p-8 sticky top-32 shadow-2xl border border-slate-800">
+             <div className="bg-[#0B0F0E] rounded-3xl p-8 sticky top-32 shadow-2xl border border-[#183C32]">
                 <h3 className="text-xl font-bold text-white mb-6">Project Information</h3>
                 
                 <div className="space-y-4 mb-8">
                   {project.systemType !== "Unknown" && (
-                  <div className="border-b border-slate-800 pb-4">
+                  <div className="border-b border-[#183C32] pb-4">
                     <span className="block text-slate-400 text-sm mb-1">System Type</span>
                     <span className="block text-white font-medium">{project.systemType}</span>
                   </div>
                   )}
                   {project.capacity !== "Unknown" && (
-                  <div className="border-b border-slate-800 pb-4">
+                  <div className="border-b border-[#183C32] pb-4">
                     <span className="block text-slate-400 text-sm mb-1">Capacity</span>
                     <span className="block text-white font-medium">{project.capacity}</span>
                   </div>
                   )}
                   {project.location !== "Unknown" && (
-                  <div className="border-b border-slate-800 pb-4">
+                  <div className="border-b border-[#183C32] pb-4">
                     <span className="block text-slate-400 text-sm mb-1">Location</span>
                     <span className="block text-white font-medium">{project.location}</span>
                   </div>
@@ -93,7 +93,7 @@ export default function ProjectDetail({ params }: { params: { id: string } }) {
 
                 <div className="pt-2">
                    <h4 className="text-white font-bold mb-4">Get a Similar Solar Solution</h4>
-                   <Link href="/get-quote" className="block w-full bg-amber-400 text-slate-900 font-bold text-center py-4 rounded-xl hover:bg-amber-500 transition-colors mb-3 shadow-lg">
+                   <Link href="/get-quote" className="block w-full bg-[#B8D83D] text-[#0B0F0E] font-bold text-center py-4 rounded-xl hover:bg-[#9dbf2c] transition-colors mb-3 shadow-lg">
                      Request a Quote
                    </Link>
                    <a href="https://wa.me/923125634911?text=Hello%2C%20I%20am%20interested%20in%20a%20solar%20installation%20similar%20to%20your%20projects.%20I%20would%20like%20to%20discuss%20my%20requirements." target="_blank" rel="noopener noreferrer" className="block w-full bg-[#25D366] text-white font-bold text-center py-4 rounded-xl hover:bg-[#20b858] transition-colors shadow-lg flex justify-center items-center">

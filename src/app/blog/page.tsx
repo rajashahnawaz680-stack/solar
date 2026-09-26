@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'Solar Knowledge Center & Blog | Solar KCKY',
+  title: 'Solar Knowledge Center & Blog | SUNORA ENERGY',
   description: 'Expert articles and guides on solar installations, system sizing, and clean energy in Islamabad and Rawalpindi.'
 };
 
@@ -17,7 +17,7 @@ export default function BlogPage() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         <div className="text-center mb-16">
-          <h1 className="text-4xl md:text-5xl font-extrabold text-slate-900 mb-6 tracking-tight">Solar Knowledge Center</h1>
+          <h1 className="text-4xl md:text-5xl font-extrabold text-[#0B0F0E] mb-6 tracking-tight">Solar Knowledge Center</h1>
           <p className="text-xl text-slate-600 max-w-2xl mx-auto">Expert insights, guides, and updates to help you navigate your transition to clean energy.</p>
         </div>
 
@@ -29,13 +29,13 @@ export default function BlogPage() {
              </div>
              <div className="p-8 md:p-12 lg:p-16 flex flex-col justify-center">
                 <div className="flex items-center gap-4 mb-4 text-sm font-bold">
-                  <span className="text-amber-500 uppercase tracking-wide">{articles[0].category}</span>
+                  <span className="text-[#9dbf2c] uppercase tracking-wide">{articles[0].category}</span>
                   <span className="text-slate-400">&bull;</span>
                   <span className="text-slate-400">{articles[0].read} Read</span>
                 </div>
-                <h2 className="text-3xl lg:text-4xl font-bold text-slate-900 mb-4 group-hover:text-amber-600 transition-colors">{articles[0].title}</h2>
+                <h2 className="text-3xl lg:text-4xl font-bold text-[#0B0F0E] mb-4 group-hover:text-amber-600 transition-colors">{articles[0].title}</h2>
                 <p className="text-slate-600 text-lg mb-8 line-clamp-3">Everything you need to know about deploying a rooftop solar array in the capital. We cover climate factors, optimal tilt angles, and structural considerations specific to Islamabad homes.</p>
-                <span className="text-slate-900 font-bold flex items-center border-b-2 border-slate-900 inline-block self-start pb-1">
+                <span className="text-[#0B0F0E] font-bold flex items-center border-b-2 border-slate-900 inline-block self-start pb-1">
                   Read Article <svg className="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17 8l4 4m0 0l-4 4m4-4H3" /></svg>
                 </span>
              </div>
@@ -48,7 +48,7 @@ export default function BlogPage() {
              <Link href={`/blog/${art.slug}`} key={art.slug} className="group bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 border border-slate-100 flex flex-col transform hover:-translate-y-1">
                <div className="relative h-56 w-full overflow-hidden bg-slate-200">
                  <img src={art.img} alt={art.title} className="object-cover w-full h-full transition-transform duration-700 group-hover:scale-110" />
-                 <div className="absolute top-4 left-4 bg-white/95 text-slate-900 text-xs font-bold px-3 py-1 rounded-full shadow-sm">
+                 <div className="absolute top-4 left-4 bg-white/95 text-[#0B0F0E] text-xs font-bold px-3 py-1 rounded-full shadow-sm">
                    {art.category}
                  </div>
                </div>
@@ -57,7 +57,7 @@ export default function BlogPage() {
                    <span>{art.date}</span>
                    <span>{art.read} Read</span>
                  </div>
-                 <h3 className="text-xl font-bold text-slate-900 mb-3 group-hover:text-amber-600 transition-colors">{art.title}</h3>
+                 <h3 className="text-xl font-bold text-[#0B0F0E] mb-3 group-hover:text-amber-600 transition-colors">{art.title}</h3>
                </div>
              </Link>
            ))}

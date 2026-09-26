@@ -12,7 +12,7 @@ export const metadata: Metadata = {
     title: "Solar System Price in Islamabad | Quotes & Installments",
     description: "Request current quotes for solar system prices in Islamabad. Pricing depends on 5kW, 10kW, 15kW, hybrid, and on-grid requirements. Cash and installment options.",
     url: '/solar-system-price-islamabad',
-    siteName: 'Solar KCKY',
+    siteName: 'SUNORA ENERGY',
     type: 'website',
   },
 };

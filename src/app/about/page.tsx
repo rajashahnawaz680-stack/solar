@@ -1,8 +1,8 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'About Solar KCKY & Our Process | Solar Installation Islamabad & Rawalpindi',
-  description: 'Learn about Solar KCKY, our professional solar installation journey, and what you can expect from our dedicated clean energy team.'
+  title: 'About SUNORA ENERGY & Our Process | Solar Installation Islamabad & Rawalpindi',
+  description: 'Learn about SUNORA ENERGY, our professional solar installation journey, and what you can expect from our dedicated clean energy team.'
 };
 
 export default function AboutPage() {
@@ -10,20 +10,20 @@ export default function AboutPage() {
     <main className="min-h-screen bg-slate-50 pt-20">
       
       {/* Hero */}
-      <section className="relative w-full h-[50vh] flex items-center justify-center overflow-hidden bg-slate-900">
-        <img src="https://images.unsplash.com/photo-1613665813446-82a78c468a1d?auto=format&fit=crop&w=1920&q=80" alt="About Solar KCKY" className="absolute inset-0 w-full h-full object-cover opacity-30 mix-blend-overlay" />
+      <section className="relative w-full h-[50vh] flex items-center justify-center overflow-hidden bg-[#0B0F0E]">
+        <img src="https://images.unsplash.com/photo-1613665813446-82a78c468a1d?auto=format&fit=crop&w=1920&q=80" alt="About SUNORA ENERGY" className="absolute inset-0 w-full h-full object-cover opacity-30 mix-blend-overlay" />
         <div className="absolute inset-0 bg-gradient-to-t from-slate-900 via-slate-900/50 to-transparent"></div>
         <div className="relative z-10 text-center max-w-4xl mx-auto px-4">
-           <h1 className="text-4xl md:text-6xl font-extrabold text-white mb-6 tracking-tight">About Solar KCKY</h1>
+           <h1 className="text-4xl md:text-6xl font-extrabold text-white mb-6 tracking-tight">About SUNORA ENERGY</h1>
            <p className="text-xl md:text-2xl text-slate-300">Dedicated solar professionals serving Islamabad and Rawalpindi.</p>
         </div>
       </section>
 
-      {/* Why Solar KCKY */}
+      {/* Why SUNORA ENERGY */}
       <section className="py-24 bg-white border-b border-slate-100">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
            <div className="text-center mb-16">
-             <h2 className="text-3xl md:text-5xl font-extrabold text-slate-900 mb-6 tracking-tight">Why Solar KCKY?</h2>
+             <h2 className="text-3xl md:text-5xl font-extrabold text-[#0B0F0E] mb-6 tracking-tight">Why SUNORA ENERGY?</h2>
              <p className="text-lg text-slate-600 max-w-2xl mx-auto">We provide tailored engineering and dedicated support for every project in the twin cities.</p>
            </div>
            
@@ -36,11 +36,11 @@ export default function AboutPage() {
                { title: "Cash & Installment Options", icon: "M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" },
                { title: "Professional Installation & Support", icon: "M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" }
              ].map((feat, i) => (
-               <div key={i} className="bg-slate-50 border border-slate-100 rounded-2xl p-6 hover:border-amber-400 hover:shadow-md transition-all flex items-start">
-                  <div className="w-12 h-12 bg-amber-400/10 rounded-xl flex items-center justify-center border border-amber-400/20 mr-4 flex-shrink-0">
-                    <svg className="w-6 h-6 text-amber-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d={feat.icon} /></svg>
+               <div key={i} className="bg-slate-50 border border-slate-100 rounded-2xl p-6 hover:border-[#B8D83D] hover:shadow-md transition-all flex items-start">
+                  <div className="w-12 h-12 bg-[#B8D83D]/10 rounded-xl flex items-center justify-center border border-[#B8D83D]/20 mr-4 flex-shrink-0">
+                    <svg className="w-6 h-6 text-[#9dbf2c]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d={feat.icon} /></svg>
                   </div>
-                  <h3 className="font-bold text-slate-900 pt-2">{feat.title}</h3>
+                  <h3 className="font-bold text-[#0B0F0E] pt-2">{feat.title}</h3>
                </div>
              ))}
            </div>
@@ -48,7 +48,7 @@ export default function AboutPage() {
       </section>
 
       {/* What You Can Expect (Trust Section) */}
-      <section className="py-24 bg-slate-900 text-white">
+      <section className="py-24 bg-[#0B0F0E] text-white">
          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-16">
                <h2 className="text-3xl md:text-5xl font-extrabold text-white mb-6 tracking-tight">What You Can Expect</h2>
@@ -56,23 +56,23 @@ export default function AboutPage() {
             </div>
             
             <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
-               <div className="bg-slate-800 rounded-3xl p-8 border border-slate-700 text-center">
-                  <div className="w-16 h-16 bg-slate-900 rounded-full flex items-center justify-center mx-auto mb-6 text-amber-400">
+               <div className="bg-[#183C32] rounded-3xl p-8 border border-[#1c473b] text-center">
+                  <div className="w-16 h-16 bg-[#0B0F0E] rounded-full flex items-center justify-center mx-auto mb-6 text-[#B8D83D]">
                      <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" /></svg>
                   </div>
                   <h3 className="text-xl font-bold mb-3">Authentic Equipment</h3>
                   <p className="text-slate-400">We utilize only verified, industry-standard equipment without substituting for unverified hardware.</p>
                </div>
-               <div className="bg-slate-800 rounded-3xl p-8 border border-slate-700 text-center relative transform md:-translate-y-4">
-                  <div className="absolute top-0 left-0 right-0 h-1 bg-amber-400 rounded-t-3xl"></div>
-                  <div className="w-16 h-16 bg-slate-900 rounded-full flex items-center justify-center mx-auto mb-6 text-amber-400 mt-2">
+               <div className="bg-[#183C32] rounded-3xl p-8 border border-[#1c473b] text-center relative transform md:-translate-y-4">
+                  <div className="absolute top-0 left-0 right-0 h-1 bg-[#B8D83D] rounded-t-3xl"></div>
+                  <div className="w-16 h-16 bg-[#0B0F0E] rounded-full flex items-center justify-center mx-auto mb-6 text-[#B8D83D] mt-2">
                      <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" /></svg>
                   </div>
                   <h3 className="text-xl font-bold mb-3">Transparent Pricing</h3>
                   <p className="text-slate-400">Clear quotations detailing system sizing and capabilities without hidden installation fees.</p>
                </div>
-               <div className="bg-slate-800 rounded-3xl p-8 border border-slate-700 text-center">
-                  <div className="w-16 h-16 bg-slate-900 rounded-full flex items-center justify-center mx-auto mb-6 text-amber-400">
+               <div className="bg-[#183C32] rounded-3xl p-8 border border-[#1c473b] text-center">
+                  <div className="w-16 h-16 bg-[#0B0F0E] rounded-full flex items-center justify-center mx-auto mb-6 text-[#B8D83D]">
                      <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M18.364 5.636l-3.536 3.536m0 5.656l3.536 3.536M9.172 9.172L5.636 5.636m3.536 9.192l-3.536 3.536M21 12a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
                   </div>
                   <h3 className="text-xl font-bold mb-3">Post-Installation Support</h3>
@@ -86,7 +86,7 @@ export default function AboutPage() {
       <section className="py-24 bg-slate-50 border-t border-slate-100">
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
            <div className="text-center mb-16">
-             <h2 className="text-3xl md:text-5xl font-extrabold text-slate-900 mb-6 tracking-tight">Your Solar Journey</h2>
+             <h2 className="text-3xl md:text-5xl font-extrabold text-[#0B0F0E] mb-6 tracking-tight">Your Solar Journey</h2>
              <p className="text-lg text-slate-600">The clear, professional six-step process to energy independence.</p>
            </div>
            
@@ -103,12 +103,12 @@ export default function AboutPage() {
                 { step: "06", title: "Testing & Handover", desc: "Comprehensive system testing, grid synchronization, and final handover." },
               ].map((item, index) => (
                  <div key={item.step} className={`relative flex items-center mb-12 ${index % 2 === 0 ? 'md:flex-row-reverse' : ''}`}>
-                    <div className="w-16 h-16 absolute left-0 md:left-1/2 rounded-full bg-slate-900 border-4 border-slate-50 flex items-center justify-center -translate-x-1/2 z-10 text-amber-400 font-extrabold shadow-lg">
+                    <div className="w-16 h-16 absolute left-0 md:left-1/2 rounded-full bg-[#0B0F0E] border-4 border-slate-50 flex items-center justify-center -translate-x-1/2 z-10 text-[#B8D83D] font-extrabold shadow-lg">
                       {item.step}
                     </div>
                     <div className={`w-full md:w-1/2 pl-24 md:pl-0 ${index % 2 === 0 ? 'md:pr-16 text-left md:text-right' : 'md:pl-16 text-left'}`}>
-                       <div className="bg-white p-6 md:p-8 rounded-2xl shadow-sm border border-slate-100 hover:shadow-xl hover:border-amber-400 transition-all">
-                          <h3 className="text-xl font-bold text-slate-900 mb-2">{item.title}</h3>
+                       <div className="bg-white p-6 md:p-8 rounded-2xl shadow-sm border border-slate-100 hover:shadow-xl hover:border-[#B8D83D] transition-all">
+                          <h3 className="text-xl font-bold text-[#0B0F0E] mb-2">{item.title}</h3>
                           <p className="text-slate-600">{item.desc}</p>
                        </div>
                     </div>
@@ -117,7 +117,7 @@ export default function AboutPage() {
            </div>
 
            <div className="mt-16 text-center">
-             <Link href="/get-quote" className="inline-block bg-amber-400 text-slate-900 font-bold px-10 py-5 rounded-xl hover:bg-amber-500 transition-colors shadow-lg">
+             <Link href="/get-quote" className="inline-block bg-[#B8D83D] text-[#0B0F0E] font-bold px-10 py-5 rounded-xl hover:bg-[#9dbf2c] transition-colors shadow-lg">
                Start Your Journey Now
              </Link>
            </div>

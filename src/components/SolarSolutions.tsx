@@ -57,7 +57,7 @@ export default function SolarSolutions() {
     <section className="py-24 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-extrabold text-slate-900 mb-6 tracking-tight">Solar Solutions Designed Around Your Energy Needs</h2>
+          <h2 className="text-4xl md:text-5xl font-extrabold text-[#0B0F0E] mb-6 tracking-tight">Solar Solutions Designed Around Your Energy Needs</h2>
           <p className="text-xl text-slate-600 max-w-2xl mx-auto">Explore solar solutions for homes, businesses and different energy requirements across Islamabad and Rawalpindi.</p>
         </div>
         
@@ -70,7 +70,7 @@ export default function SolarSolutions() {
               <div className="absolute inset-0 p-8 flex flex-col justify-end">
                 <h3 className="text-2xl font-bold text-white mb-2">{item.title}</h3>
                 <p className="text-slate-300 text-sm mb-6 max-w-sm line-clamp-2">{item.desc}</p>
-                <div className="inline-flex items-center text-amber-400 font-bold text-sm tracking-wider uppercase group-hover:text-white transition-colors">
+                <div className="inline-flex items-center text-[#B8D83D] font-bold text-sm tracking-wider uppercase group-hover:text-white transition-colors">
                   Explore Solution &rarr;
                 </div>
               </div>

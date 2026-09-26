@@ -63,7 +63,7 @@ export default function WhatWeDo() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-extrabold text-slate-900 mb-6 tracking-tight">What We Do</h2>
+          <h2 className="text-4xl md:text-5xl font-extrabold text-[#0B0F0E] mb-6 tracking-tight">What We Do</h2>
           <p className="text-xl text-slate-600 max-w-2xl mx-auto">
             Providing end-to-end solar engineering, installation, and maintenance for residential and commercial energy independence.
           </p>
@@ -76,14 +76,14 @@ export default function WhatWeDo() {
               <div className="absolute inset-0 bg-gradient-to-t from-slate-900 via-slate-900/60 to-slate-900/10 group-hover:via-slate-900/80 transition-all duration-500"></div>
               
               <div className="absolute inset-0 p-8 flex flex-col justify-end">
-                <div className="bg-amber-400 w-14 h-14 rounded-full flex items-center justify-center mb-6 transform group-hover:-translate-y-2 transition-transform duration-500 shadow-lg">
+                <div className="bg-[#B8D83D] w-14 h-14 rounded-full flex items-center justify-center mb-6 transform group-hover:-translate-y-2 transition-transform duration-500 shadow-lg">
                   {svc.icon}
                 </div>
                 <h3 className="text-2xl font-extrabold text-white mb-3 transform group-hover:-translate-y-2 transition-transform duration-500">{svc.title}</h3>
                 <p className="text-slate-300 text-sm mb-6 max-w-sm opacity-90 transform group-hover:-translate-y-2 transition-transform duration-500 line-clamp-3">
                   {svc.desc}
                 </p>
-                <span className="inline-block text-amber-400 font-bold uppercase tracking-wider text-sm border-b border-amber-400 self-start pb-0.5 group-hover:-translate-y-2 transition-transform duration-500">
+                <span className="inline-block text-[#B8D83D] font-bold uppercase tracking-wider text-sm border-b border-[#B8D83D] self-start pb-0.5 group-hover:-translate-y-2 transition-transform duration-500">
                   Explore &rarr;
                 </span>
               </div>

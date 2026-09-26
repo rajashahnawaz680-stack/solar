@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'Frequently Asked Questions | Solar KCKY',
+  title: 'Frequently Asked Questions | SUNORA ENERGY',
   description: 'Comprehensive answers regarding solar system sizing, installation, on-grid vs hybrid, pricing, and maintenance in Islamabad and Rawalpindi.'
 };
 
@@ -34,20 +34,20 @@ export default function FAQPage() {
     <main className="min-h-screen bg-slate-50 pt-28 pb-24">
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
-          <h1 className="text-4xl md:text-5xl font-extrabold text-slate-900 mb-6 tracking-tight">Frequently Asked Questions</h1>
+          <h1 className="text-4xl md:text-5xl font-extrabold text-[#0B0F0E] mb-6 tracking-tight">Frequently Asked Questions</h1>
           <p className="text-xl text-slate-600">Everything you need to know about transitioning to solar.</p>
         </div>
 
         <div className="space-y-16">
           {faqs.map((group, i) => (
             <div key={i}>
-               <h2 className="text-2xl font-bold text-slate-900 mb-6 border-b border-slate-200 pb-3">{group.category}</h2>
+               <h2 className="text-2xl font-bold text-[#0B0F0E] mb-6 border-b border-slate-200 pb-3">{group.category}</h2>
                <div className="space-y-4">
                  {group.questions.map((faq, j) => (
                    <details key={j} className="bg-white rounded-2xl p-6 shadow-sm border border-slate-100 cursor-pointer group">
-                     <summary className="font-bold text-lg text-slate-900 flex justify-between items-center outline-none">
+                     <summary className="font-bold text-lg text-[#0B0F0E] flex justify-between items-center outline-none">
                        {faq.q}
-                       <svg className="w-5 h-5 text-amber-500 transform group-open:rotate-180 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7" /></svg>
+                       <svg className="w-5 h-5 text-[#9dbf2c] transform group-open:rotate-180 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7" /></svg>
                      </summary>
                      <p className="mt-4 text-slate-600 leading-relaxed">{faq.a}</p>
                    </details>
@@ -57,11 +57,11 @@ export default function FAQPage() {
           ))}
         </div>
 
-        <div className="mt-16 text-center bg-slate-900 rounded-3xl p-10 text-white shadow-xl">
+        <div className="mt-16 text-center bg-[#0B0F0E] rounded-3xl p-10 text-white shadow-xl">
            <h3 className="text-2xl font-bold mb-4">Still have questions?</h3>
            <p className="text-slate-300 mb-8">Our solar experts are ready to discuss your specific requirements.</p>
            <div className="flex flex-col sm:flex-row justify-center gap-4">
-             <Link href="/get-quote" className="bg-amber-400 text-slate-900 font-bold px-8 py-3 rounded-xl hover:bg-amber-500 transition-colors">Request a Quote</Link>
+             <Link href="/get-quote" className="bg-[#B8D83D] text-[#0B0F0E] font-bold px-8 py-3 rounded-xl hover:bg-[#9dbf2c] transition-colors">Request a Quote</Link>
              <a href="https://wa.me/923125634911" target="_blank" rel="noopener noreferrer" className="bg-[#25D366] text-white font-bold px-8 py-3 rounded-xl hover:bg-[#20b858] transition-colors flex items-center justify-center">
                WhatsApp Us
              </a>

@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'Battery Storage | Solar KCKY',
+  title: 'Battery Storage | SUNORA ENERGY',
   description: 'Advanced energy storage solutions for round-the-clock power availability.'
 };
 
@@ -10,13 +10,13 @@ export default function SolutionPage() {
     <main className="min-h-screen bg-white pt-20">
       
       {/* Hero Banner */}
-      <section className="relative w-full h-[60vh] flex items-center justify-center overflow-hidden bg-slate-900">
+      <section className="relative w-full h-[60vh] flex items-center justify-center overflow-hidden bg-[#0B0F0E]">
         <img src="https://images.unsplash.com/photo-1509391366360-51590d6350f5?auto=format&fit=crop&w=1920&q=80" alt="Battery Storage" className="absolute inset-0 w-full h-full object-cover opacity-40 mix-blend-overlay" />
         <div className="absolute inset-0 bg-gradient-to-t from-slate-900 via-slate-900/60 to-transparent"></div>
         <div className="relative z-10 text-center max-w-4xl mx-auto px-4">
            <h1 className="text-5xl md:text-7xl font-extrabold text-white mb-6 tracking-tight drop-shadow-lg">Battery Storage</h1>
            <p className="text-xl md:text-2xl text-slate-300 mb-10 drop-shadow-md">Advanced energy storage solutions for round-the-clock power availability.</p>
-           <Link href="/get-quote" className="inline-block bg-amber-400 text-slate-900 font-bold px-10 py-4 rounded-xl hover:bg-amber-500 transition-colors shadow-xl text-lg">
+           <Link href="/get-quote" className="inline-block bg-[#B8D83D] text-[#0B0F0E] font-bold px-10 py-4 rounded-xl hover:bg-[#9dbf2c] transition-colors shadow-xl text-lg">
              Get Free Solar Quote
            </Link>
         </div>
@@ -28,41 +28,41 @@ export default function SolutionPage() {
           {/* Main Content */}
           <div className="lg:col-span-2 space-y-16">
             <div>
-              <h2 className="text-3xl font-bold text-slate-900 mb-6 border-b border-slate-100 pb-4">Solution Overview</h2>
+              <h2 className="text-3xl font-bold text-[#0B0F0E] mb-6 border-b border-slate-100 pb-4">Solution Overview</h2>
               <p className="text-slate-600 text-lg leading-relaxed">
                 Our battery storage services are engineered to provide maximum efficiency and reliability for properties in Islamabad and Rawalpindi. We utilize verified, industry-standard equipment to ensure long-term performance and robust energy independence.
               </p>
             </div>
 
             <div className="bg-slate-50 rounded-3xl p-8 md:p-10 border border-slate-100">
-              <h2 className="text-2xl font-bold text-slate-900 mb-8">Core Benefits & Specifications</h2>
+              <h2 className="text-2xl font-bold text-[#0B0F0E] mb-8">Core Benefits & Specifications</h2>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                <div className="flex items-start"><svg className="w-5 h-5 text-amber-500 mr-3 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7" /></svg><div><h4 className="font-bold text-slate-900 mb-1">Nighttime Power</h4><p className="text-sm text-slate-600">Use stored sun energy at night.</p></div></div>
-     <div className="flex items-start"><svg className="w-5 h-5 text-amber-500 mr-3 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7" /></svg><div><h4 className="font-bold text-slate-900 mb-1">Load Shifting</h4><p className="text-sm text-slate-600">Avoid peak grid tariffs.</p></div></div>
+                <div className="flex items-start"><svg className="w-5 h-5 text-[#9dbf2c] mr-3 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7" /></svg><div><h4 className="font-bold text-[#0B0F0E] mb-1">Nighttime Power</h4><p className="text-sm text-slate-600">Use stored sun energy at night.</p></div></div>
+     <div className="flex items-start"><svg className="w-5 h-5 text-[#9dbf2c] mr-3 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7" /></svg><div><h4 className="font-bold text-[#0B0F0E] mb-1">Load Shifting</h4><p className="text-sm text-slate-600">Avoid peak grid tariffs.</p></div></div>
               </div>
             </div>
 
             <div>
-              <h2 className="text-3xl font-bold text-slate-900 mb-6 border-b border-slate-100 pb-4">How It Works</h2>
+              <h2 className="text-3xl font-bold text-[#0B0F0E] mb-6 border-b border-slate-100 pb-4">How It Works</h2>
               <div className="space-y-6">
                  <div className="flex">
-                    <div className="flex-shrink-0 w-12 h-12 rounded-full bg-slate-900 text-amber-400 flex items-center justify-center font-bold text-xl mr-6 shadow-md">1</div>
+                    <div className="flex-shrink-0 w-12 h-12 rounded-full bg-[#0B0F0E] text-[#B8D83D] flex items-center justify-center font-bold text-xl mr-6 shadow-md">1</div>
                     <div>
-                      <h3 className="text-xl font-bold text-slate-900 mb-2">Site Assessment</h3>
+                      <h3 className="text-xl font-bold text-[#0B0F0E] mb-2">Site Assessment</h3>
                       <p className="text-slate-600">We analyze your energy consumption and property structure to design the optimal battery storage.</p>
                     </div>
                  </div>
                  <div className="flex">
-                    <div className="flex-shrink-0 w-12 h-12 rounded-full bg-slate-900 text-amber-400 flex items-center justify-center font-bold text-xl mr-6 shadow-md">2</div>
+                    <div className="flex-shrink-0 w-12 h-12 rounded-full bg-[#0B0F0E] text-[#B8D83D] flex items-center justify-center font-bold text-xl mr-6 shadow-md">2</div>
                     <div>
-                      <h3 className="text-xl font-bold text-slate-900 mb-2">Professional Installation</h3>
+                      <h3 className="text-xl font-bold text-[#0B0F0E] mb-2">Professional Installation</h3>
                       <p className="text-slate-600">Our certified technicians deploy the system safely, ensuring full structural integrity and optimal alignment.</p>
                     </div>
                  </div>
                  <div className="flex">
-                    <div className="flex-shrink-0 w-12 h-12 rounded-full bg-slate-900 text-amber-400 flex items-center justify-center font-bold text-xl mr-6 shadow-md">3</div>
+                    <div className="flex-shrink-0 w-12 h-12 rounded-full bg-[#0B0F0E] text-[#B8D83D] flex items-center justify-center font-bold text-xl mr-6 shadow-md">3</div>
                     <div>
-                      <h3 className="text-xl font-bold text-slate-900 mb-2">Commissioning & Support</h3>
+                      <h3 className="text-xl font-bold text-[#0B0F0E] mb-2">Commissioning & Support</h3>
                       <p className="text-slate-600">The system is activated, tested, and handed over with complete operational guidance and support.</p>
                     </div>
                  </div>
@@ -74,13 +74,13 @@ export default function SolutionPage() {
 
           {/* Sidebar CTA */}
           <div className="lg:col-span-1">
-             <div className="bg-slate-900 rounded-3xl p-8 sticky top-32 shadow-2xl border border-slate-800 text-center">
-                <div className="w-16 h-16 bg-amber-400 rounded-2xl flex items-center justify-center mx-auto mb-6 transform rotate-3 shadow-lg">
-                   <svg className="w-8 h-8 text-slate-900" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M13 10V3L4 14h7v7l9-11h-7z" /></svg>
+             <div className="bg-[#0B0F0E] rounded-3xl p-8 sticky top-32 shadow-2xl border border-[#183C32] text-center">
+                <div className="w-16 h-16 bg-[#B8D83D] rounded-2xl flex items-center justify-center mx-auto mb-6 transform rotate-3 shadow-lg">
+                   <svg className="w-8 h-8 text-[#0B0F0E]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M13 10V3L4 14h7v7l9-11h-7z" /></svg>
                 </div>
                 <h3 className="text-2xl font-bold text-white mb-4">Ready to Switch?</h3>
                 <p className="text-slate-300 mb-8">Get a customized quotation for your battery storage today.</p>
-                <Link href="/get-quote" className="block w-full bg-amber-400 text-slate-900 font-bold py-4 rounded-xl hover:bg-amber-500 transition-colors mb-4 shadow-lg">
+                <Link href="/get-quote" className="block w-full bg-[#B8D83D] text-[#0B0F0E] font-bold py-4 rounded-xl hover:bg-[#9dbf2c] transition-colors mb-4 shadow-lg">
                   Request Custom Quote
                 </Link>
                 <a href="https://wa.me/923125634911" target="_blank" rel="noopener noreferrer" className="block w-full bg-[#25D366] text-white font-bold py-4 rounded-xl hover:bg-[#20b858] transition-colors shadow-lg flex justify-center items-center">
